@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNC Mill Bracket</title>
+    <meta name="description" content="Design and testing of a CNC mill bracket for accommodating a sensor.">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>CNC Mill Bracket</h1>
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </header>
+
+    <main class="container text-center flex-grow-1 mt-4">
+
+        <div id="projectCarousel" class="carousel slide mt-4" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#projectCarousel" data-slide-to="1"></li>
+                <li data-target="#projectCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <img src="Media/CNC mill bracket/d39d70_2d1c5030f9d94b79a00708d4a10cf14b~mv2.png" class="d-block img-fluid" alt="CNC Mill Bracket Engineering Drawing">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <img src="Media/CNC mill bracket/d39d70_7b24963f74d94d6481c015ea877e8b6c~mv2.png" class="d-block img-fluid" alt="CNC Mill Bracket Installed on Machine - Top View">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <img src="Media/CNC mill bracket/d39d70_dc48133a52b549f1819982dddc3d1a8c~mv2.png" class="d-block img-fluid" alt="CNC Mill Bracket Installed on Machine - Side View">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="project-description mt-4">
+            <div class="row">
+                <div class="col-md-4 text-left description-section">
+                    <h2>What?</h2>
+                    <ul>
+                        <li><strong>Redesign</strong> and test a mounting bracket that can be attached to a mini CNC milling machine, to <strong>accommodate a sensor</strong>.</li>
+                        <li>Forces to be designed for:
+                            <ul>
+                                <li>X direction - 100N</li>
+                                <li>Y direction - 100N</li>
+                                <li>Z direction - 100N</li>
+                            </ul>
+                        </li>
+                        <li>Performance goals:
+                            <ul>
+                                <li>Deflection:
+                                    <ul>
+                                        <li>X direction - ±1mm</li>
+                                        <li>Y direction - ±1mm</li>
+                                        <li>Z direction - ±1mm</li>
+                                    </ul>
+                                </li>
+                                <li>Weight: Reduce as much as possible from the original weight (400g).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-left description-section">
+                    <h2>How?</h2>
+                    <ul>
+                        <li><strong>Calculated deflections</strong> in X, Y, and Z directions by hand.</li>
+                        <li>Calculated both deflections and stresses in the X, Y, and Z directions with <strong>FEA</strong>.</li>
+                        <li>Sent designs to be <strong>3D printed</strong> and <strong>tested them</strong>.</li>
+                        <li>Decided to keep the design that weighed less and had the least deflection when subjected to a 100 N force (in all three directions).</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-left description-section">
+                    <h2>Results</h2>
+                    <ul>
+                        <li>The final design fulfilled the design requirements:</li>
+                        <li><strong>Weight</strong>: 193 gr.</li>
+                        <li>Deflection:
+                            <ul>
+                                <li>X direction - 1.77 mm</li>
+                                <li>Y direction - didn't test.</li>
+                                <li>Z direction - ± 0.64 mm</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="Media/CNC mill bracket/Bracket Report.pdf"><button>Click here to read design report</button></a>
+        </div>
+    </main>
+
+    <br>
+
+    <footer>
+        <div class="report text-center">
+            <a href="index.html"><button><strong>Go back to portfolio</strong></button></a>
+        </div>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

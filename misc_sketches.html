@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misc</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Miscellaneous Sketches</h1>
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </header>
+
+    <main class="container text-center flex-grow-1 mt-4">
+        <section class="image-grid">
+            <div class="grid-item">
+                <img src="Media/Misc/1.png" alt="Hot Glue Gun Rendering" onclick="openCarousel(0)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Misc/2.png" alt="Metal Piece Rendering" onclick="openCarousel(1)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Misc/3.png" alt="Metal Rod Rendering" onclick="openCarousel(2)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Misc/4.png" alt="Computer Mouse Rendering" onclick="openCarousel(3)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Misc/5.png" alt="Desk, Table, and Water Bottle Rendering" onclick="openCarousel(4)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Misc/6.png" alt="Wooden Chairn Rendering" onclick="openCarousel(5)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Misc/7.png" alt="Miscellaneous Figures Rendering" onclick="openCarousel(6)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Misc/35.png" alt="High Top Converse Shoes Rendering" onclick="openCarousel(7)">
+            </div>
+
+        </section>
+        <div id="carouselModal" class="carousel-modal">
+            <span class="close" onclick="closeCarousel()">&times;</span>
+            <div class="carousel-content">
+                <img id="carouselImage" src="" alt="Carousel Image">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </main>
+
+    <br>
+
+    <footer>
+        <div class="report text-center">
+            <a href="index.html"><button><strong>Go back to portfolio</strong></button></a>
+        </div>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+    <script>
+        initializeCarousel([
+            'Media/Misc/1.png',
+            'Media/Misc/2.png',
+            'Media/Misc/3.png',
+            'Media/Misc/4.png',
+            'Media/Misc/5.png',
+            'Media/Misc/6.png',
+            'Media/Misc/7.png',
+            'Media/Misc/35.png',
+        ]);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

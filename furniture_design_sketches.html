@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Furniture Design</h1>
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </header>
+
+    <main class="container text-center flex-grow-1 mt-4">
+        <section class="image-grid">
+            <div class="grid-item">
+                <img src="Media/Furniture/21.png" alt="Furniture Sketch 1" onclick="openCarousel(0)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Furniture/22.png" alt="Furniture Sketch 2" onclick="openCarousel(1)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Furniture/23.png" alt="Furniture Sketch 3" onclick="openCarousel(2)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Furniture/24.png" alt="Furniture Sketch 4" onclick="openCarousel(3)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Furniture/25.png" alt="Furniture Sketch 5" onclick="openCarousel(4)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Furniture/26.png" alt="Furniture Sketch 6" onclick="openCarousel(5)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Furniture/27.png" alt="Furniture Sketch 7" onclick="openCarousel(6)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Furniture/28.png" alt="Furniture Sketch 8" onclick="openCarousel(7)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Furniture/29.png" alt="Furniture Sketch 9" onclick="openCarousel(8)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Furniture/30.png" alt="Furniture Sketch 10" onclick="openCarousel(9)">
+            </div>
+            
+        </section>
+        <div id="carouselModal" class="carousel-modal">
+            <span class="close" onclick="closeCarousel()">&times;</span>
+            <div class="carousel-content">
+                <img id="carouselImage" src="" alt="Carousel Image">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </main>
+
+    <br>
+
+    <footer>
+        <div class="report text-center">
+            <a href="index.html"><button><strong>Go back to portfolio</strong></button></a>
+        </div>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+    <script>
+        // Initialize the carousel with the images specific to this page
+        initializeCarousel([
+            'Media/Furniture/21.png',
+            'Media/Furniture/22.png',
+            'Media/Furniture/23.png',
+            'Media/Furniture/24.png',
+            'Media/Furniture/25.png',
+            'Media/Furniture/26.png',
+            'Media/Furniture/27.png',
+            'Media/Furniture/28.png',
+            'Media/Furniture/29.png',
+            'Media/Furniture/30.png',
+            // Add paths for all images on this page
+        ]);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

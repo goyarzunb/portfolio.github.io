@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Shoe Design</h1>
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </header>
+
+    <main class="container text-center flex-grow-1 mt-4">
+        <section class="image-grid">
+            <div class="grid-item">
+                <img src="Media/Shoe/31.png" alt="Shoe Sketch 1" onclick="openCarousel(0)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Shoe/32.png" alt="Shoe Sketch 2" onclick="openCarousel(1)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Shoe/33.png" alt="Shoe Sketch 3" onclick="openCarousel(2)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Shoe/34.png" alt="Shoe Sketch 4" onclick="openCarousel(3)">
+            </div>
+        </section>
+
+        <div id="carouselModal" class="carousel-modal">
+            <span class="close" onclick="closeCarousel()">&times;</span>
+            <div class="carousel-content">
+                <img id="carouselImage" src="" alt="Carousel Image">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </main>
+
+    <br>
+
+    <footer>
+        <div class="report text-center">
+            <a href="index.html"><button><strong>Go back to portfolio</strong></button></a>
+        </div>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+    <script>
+        initializeCarousel([
+            'Media/Shoe/31.png',
+            'Media/Shoe/32.png',
+            'Media/Shoe/33.png',
+            'Media/Shoe/34.png',
+        ]);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

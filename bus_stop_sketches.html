@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Stops</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Bus Stops Design</h1>
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </header>
+
+    <main class="container text-center flex-grow-1 mt-4">
+        <section class="image-grid">
+            <div class="grid-item">
+                <img src="Media/Bus Stop/8.png" alt="Bus Stop Atributes List" onclick="openCarousel(0)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/9.png" alt="Bus Stop Sketch 2" onclick="openCarousel(1)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/10.png" alt="Bus Stop Thumbnails 1" onclick="openCarousel(2)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/11.png" alt="Bus Stop Thumbnails 2" onclick="openCarousel(3)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/12.png" alt="Bus Stop Thumbnails 3" onclick="openCarousel(4)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/13.png" alt="Bus Stop Thumbnails 4" onclick="openCarousel(5)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/14.png" alt="Bus Stop Rendered Sketch 1" onclick="openCarousel(6)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/15.png" alt="Bus Stop Rendered Sketch 2" onclick="openCarousel(7)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/16.png" alt="Bus Stop Isometric Sketch" onclick="openCarousel(8)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/17.png" alt="Bus Stop Rendered Sketch 3" onclick="openCarousel(9)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/18.png" alt="Bus Stop Rendered Sketch 4" onclick="openCarousel(10)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/19.png" alt="Bus Stop Rendered Sketch 5" onclick="openCarousel(11)">
+            </div>
+            <div class="grid-item">
+                <img src="Media/Bus Stop/20.png" alt="Bus Stop Rendered Sketch 6" onclick="openCarousel(12)">
+            </div>
+            
+        </section>
+
+        <div id="carouselModal" class="carousel-modal">
+            <span class="close" onclick="closeCarousel()">&times;</span>
+            <div class="carousel-content">
+                <img id="carouselImage" src="" alt="Carousel Image">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </main>
+
+    <br>
+
+    <footer>
+        <div class="report text-center">
+            <a href="index.html"><button><strong>Go back to portfolio</strong></button></a>
+        </div>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+    <script>
+        // Initialize the carousel with the images specific to this page
+        initializeCarousel([
+            'Media/Bus Stop/8.png',
+            'Media/Bus Stop/9.png',
+            'Media/Bus Stop/10.png',
+            'Media/Bus Stop/11.png',
+            'Media/Bus Stop/12.png',
+            'Media/Bus Stop/13.png',
+            'Media/Bus Stop/14.png',
+            'Media/Bus Stop/15.png',
+            'Media/Bus Stop/16.png',
+            'Media/Bus Stop/17.png',
+            'Media/Bus Stop/18.png',
+            'Media/Bus Stop/19.png',
+            'Media/Bus Stop/20.png',
+        ]);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
