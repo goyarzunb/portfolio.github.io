@@ -1,143 +1,451 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriela Oyarzun Batlle's Portfolio</title>
-    <meta name="description" content="A portfolio showcasing the work of Gabriela Oyarzun Batlle, an engineer and designer.">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header id="welcome">
-        <h1>Gabriela Oyarzun Batlle</h1>
-        <p>Engineer - Designer - Artist</p>
-        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    </header>
+<html>
+    <head>
+        <title>Gabriela Oyarzun Batlle's Portfolio &mdash; Home Page</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta charset="utf-8">
+        <meta name="author" content="Roman Kirichik">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
 
-    <section id="projects">
-        <h2>Welcome</h2>
-        <p>Welcome to my website, a testament to my passion for innovation, problem-solving, and the pursuit of excellence in the field of engineering and product design and development.</p>
+        
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-responsive.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">        
 
-        <div class="projects-jump">
-            <a href="#engineering-design"><button type="button">Engineering Design</button></a>
-            <a href="#graphic-design"><button type="button">Graphic Design</button></a>
-            <a href="#uiux-design"><button type="button">UX/UI Design</button></a>
-            <a href="#human-centered-design"><button type="button">Human Centered Design</button></a>
-            <a href="#sketches"><button type="button">Sketches</button></a>
+        
+    </head>
+    <body class="appear-animate">
+        
+        <!-- Page Loader -->        
+        <div class="page-loader">
+            <div class="loader">Loading...</div>
         </div>
+        <!-- End Page Loader -->
+        
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+            
+            <!-- Home Section -->
+            <section class="home-section bg-dark-alfa-30 parallax-2" data-background="www/Media/website cover.png" id="home">
+                <div class="js-height-full">
+                    
+                    <!-- Hero Content -->
+                    <div class="home-content">
+                        <div class="home-text">
+                            <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.5s">
+                                <img src="Media/logo-name.png">
+                            </div>
+                            <div class="font-variant hs-line-6 white">
+                                Engineer &&nbsp;Designer
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- End Hero Content -->
+                    
+                    <!-- Scroll Down -->
+                    <div class="local-scroll">
+                        <a href="#about" class="scroll-down"><i class="font-variant fa fa-angle-down scroll-down-icon"></i></a>
+                    </div>
+                    <!-- End Scroll Down -->
+                    
+                </div>
+            </section>
+            <!-- End Home Section -->
+            
+            <!-- Navigation panel -->
+            <nav class="main-nav dark transparent stick-fixed">
+                <div class="full-wrapper relative clearfix">
+                    <!-- Logo ( * your text or image into link tag *) -->
+                    <div class="nav-logo-wrap local-scroll">
+                        <a href="#top" class="logo">
+                            <img src="Media/logo1.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="mobile-nav">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <!-- Main Menu -->
+                    <div class="inner-nav desktop-nav">
+                        <ul class="font-variant clearlist scroll-nav local-scroll">
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#portfolio">My Works</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#about">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navigation panel -->
+    
+            <!-- Portfolio Section -->
+            <section class="page-section" id="portfolio">
+                <div class="container">
+                    <h2 class="font-variant mt-70 mt-sm-40 mb-50 mb-sm-0">
+                        My Works
+                    </h2>
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                
+                                <div class="section-text align-center mb-70 mb-xs-40">
+                                    Welcome to my website, a testament to my passion for innovation, problem-solving, and the pursuit of excellence in the field of engineering and product design and development. Enjoy!
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Works Filter -->                    
+                    <div class="works-filter font-alt align-center">
+                        <a href="#" class="filter active" data-filter="*">All works</a>
+                        <a href="#" class="filter" data-filter=".product_design">Product Design</a>
+                        <a href="#" class="filter" data-filter=".engineering_design">Engineering Design</a>
+                        <a href="#" class="filter" data-filter=".visual_design">Visual Design</a>
+                    </div>                    
+                    <!-- End Works Filter -->
+                    
+                    <!-- Works Grid -->
+                    <ul class="works-grid work-grid-3 work-grid-gut clearfix font-alt hover-white" id="work-grid">
+                        
+                        <!-- Work Item (Lightbox) -->
+                        <li class="work-item mix engineering_design">
+                            <a href="bracket.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/CNC mill bracket/bracket_cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">CNC Mill Bracket</h3>
+                                    <div class="work-descr">
+                                        Engineering Design
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <li class="work-item mix product_design">
+                            <a href="rice_spinner.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/Rice Spinner/rice_cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Rice Spinner</h3>
+                                    <div class="work-descr">
+                                        Sustainability Focused Design
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <li class="work-item mix engineering_design">
+                            <a href="Seatbelt_boxes.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/Seatbelt Boxes/seatbelt_cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Seatbelt Boxes</h3>
+                                    <div class="work-descr">
+                                        NU BAJA SAE
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <li class="work-item mix visual_design">
+                            <a href="bus.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/Bus Stop/bus_cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Northwestern Bus Stop</h3>
+                                    <div class="work-descr">
+                                        Sketches
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <li class="work-item mix engineering_design">
+                            <a href="cvt.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/CVT Cover/cvt_cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">CVT Cover</h3>
+                                    <div class="work-descr">
+                                        NU BAJA SAE
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <li class="work-item mix visual_design">
+                            <a href="portfolio-single-1.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/Shoe/shoes_cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Stiletto's Design</h3>
+                                    <div class="work-descr">
+                                        Sketches
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <li class="work-item mix product_design">
+                            <a href="flap_mask.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/Flap Mask/mask_cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Flap Mask</h3>
+                                    <div class="work-descr">
+                                        Shirley Ryan AbilityLab, Inc.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <li class="work-item mix visual_design">
+                            <a href="portfolio-single-1.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/Furniture/furniture_cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Daisy Night Stand</h3>
+                                    <div class="work-descr">
+                                        Sketches
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <li class="work-item mix visual_design">
+                            <a href="vild.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/Vild/vild cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Vild Zoo</h3>
+                                    <div class="work-descr">
+                                        Copenhagen Zoo re-banding 
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <li class="work-item mix visual_design">
+                            <a href="portfolio-single-1.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="Media/Home Abroad/home abroad cover.png" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Home Abroad</h3>
+                                    <div class="work-descr">
+                                        Posters
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (External Page) -->
+                        <!-- <li class="work-item mix design photography">
+                            <a href="portfolio-single-1.html" class="work-ext-link">
+                                <div class="work-img">
+                                    <img class="work-img" src="images/portfolio/projects-11.jpg" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Space</h3>
+                                    <div class="work-descr">
+                                        External Page
+                                    </div>
+                                </div>
+                            </a>
+                        </li> -->
+                        <!-- End Work Item -->
+                        
+                        <!-- Work Item (Lightbox) -->
+                        <!-- <li class="work-item mix design branding">
+                            <a href="images/portfolio/full-project-3.jpg" class="work-lightbox-link mfp-image">
+                                <div class="work-img">
+                                    <img src="images/portfolio/projects-12.jpg" alt="Work" />
+                                </div>
+                                <div class="work-intro">
+                                    <h3 class="work-title">Young Man</h3>
+                                    <div class="work-descr">
+                                        Lightbox
+                                    </div>
+                                </div>
+                            </a>
+                        </li> -->
+                        <!-- End Work Item -->
+                        
+                    </ul>
+                    <!-- End Works Grid -->
+                    
+                </div>
+            </section>
+            <!-- End Portfolio Section -->
 
-        <div id="engineering-design" class="project-category">
-            <h3>Engineering Design</h3>
-            <br>
-            <div class="projects-grid">
-                <a href="CNC.html" class="project" role="button" tabindex="0">
-                    <img src="Media/CNC mill bracket/d39d70_7b24963f74d94d6481c015ea877e8b6c~mv2.png" alt="CNC Mill Bracket Picture" class="project-image">
-                    <h4>CNC Mill Bracket</h4>
-                </a>
+            <!-- Call Action Section -->
+            <section class="page-section small-section bg-dark" id="contact">
+                <div class="container">
+                    <div class="align-center">
+                        <h3 class="font-alt no-transform white">Like my creative works?</h3>
+                        <div class="local-scroll">
+                            <a href="mailto:gabrielabatlle2025@u.northwestern.edu" class="btn btn-mod btn-w btn-medium btn-round">Email Me</a>
+                            <a href="Media/Resume - Gabriela Oyarzun Batlle 2024 (1).pdf" class="btn btn-mod btn-w btn-medium btn-round">My Resume</a>
+                            <a href="https://www.linkedin.com/in/gabriela-oyarzun-batlle/" class="btn btn-mod btn-w btn-medium btn-round">LinkedIn</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- End Call Action Section -->
 
-                <a href="cvt_cover.html" class="project" role="button" tabindex="0">
-                    <img src="Media/CVT Cover/d39d70_be5d7e15d9df45eaafee39b288a5ba46~mv2.png" alt="CVT Cover CAD Screenshot" class="project-image">
-                    <h4>CVT Cover - NU Baja SAE</h4>
-                </a>
+            <!-- About Section -->
+            <section class="page-section" id="about">
+                <div class="container">
+                    
+                    <h2 class="font-variant align-left mb-10 mb-sm-10">
+                        <br>
+                        About Me
+                    </h2>
+                    
+                    <div class="section-text mb-50 mb-sm-20">
+                        <div class="row">
+                        
+                            <!-- <div class="col-md-4">
+                                <blockquote>
+                                    <p>
+                                    Design is&nbsp;not making beauty, beauty emerges from selection, affinities, integration, love.
+                                    </p>
+                                    <footer>
+                                        Louis Kahn
+                                    </footer>
+                                </blockquote>
+                            </div> -->
+                            
+                            <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
+                                <img class="responsive-img" src="Media/IMG_2474.jpg" alt="Gabriela's Picture">
+                            </div>
 
-                <a href="seatbelt_boxes.html" class="project" role="button" tabindex="0"> 
-                    <img src="Media/Seatbelt Boxes/d39d70_f1e4d8fbba2549c8919e31ddcd06d4b3~mv2.png" alt="Seatbelt Boxes CAD Screenshot" class="project-image">
-                    <h4>Seatbelt Boxes - NU Baja SAE</h4>
-                </a>               
-            </div>
+                            <div class="col-md-8 col-sm-6 mb-sm-50 mb-xs-30">
+                                I am an international student from Chile studying Mechanical Engineering at Northwestern University. Currently, I'm working as a shop trainer, which allows me to cultivate my creativity and collaboration in a fast paced environment. I'm passionate, resilient, and adaptable and I pride myself on my ability to make others feel comfortable.  People often describe me as funny – I have a knack for reading the room and tailoring my humor to my audience. 
+                                <br>
+                                <br>
+                                In my work life, I strive for respectful, collaborative interactions and value a comfortable and safe space above all. I'm always ready to ask questions and lend a helping hand. Outside the workplace, you'll likely find me climbing, reading or on the rugby field, pushing my limits and enjoying the team camaraderie. Additionally, I've recently fallen in love with the art of baking sourdough. There’s something magical about making a loaf of bread from scratch!
+
+                                <br>
+                                <br>In essence, I'm a multifaceted individual who brings enthusiasm, creativity, and a methodical approach to both my professional and personal life. I'm excited to persue a future in product design and management, and I'm always ready to take on new challenges with a smile and a can-do attitude!
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End About Section -->            
+            
+            
+            <!-- Footer -->
+            <footer class="small-section footer pb-10">
+                <div class="container">
+                    
+                    <!-- Footer Logo -->
+                    <div class="mb-30 fadeInUp responsive-footer-logo" alt="" data-wow-duration="1.5s">
+                        <a href="#top"><img src="Media/logo1.png"/></a>
+                    </div>
+                    <!-- End Footer Logo -->
+
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        
+                        <!-- Copyright -->
+                        <div class="footer-copy font-alt">
+                            <a href="http://themeforest.net/user/theme-guru/portfolio" target="_blank">&copy; Rhythm 2015</a>.
+                        </div>
+                        <!-- End Copyright -->
+                                            
+                    </div> 
+                    <!-- End Footer Text --> 
+                    
+                 </div>
+                 
+                 
+                 <!-- Top Link -->
+                 <div class="local-scroll">
+                     <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+                 </div>
+                 <!-- End Top Link -->
+
+            </footer>
+            <!-- End Foter -->
+        
+        
         </div>
-
-        <div id="graphic-design" class="project-category">
-            <h3>Graphic Design</h3>
-            <br>
-            <div class="projects-grid">
-                <a href="home_abroad.html" class="project" role="button" tabindex="0">
-                    <img src="Media/Home Abroad/bike.png" alt="Home Abroad Poster" class="graphic-design-image">
-                    <h4>Home Abroad</h4>
-                </a>
-
-                <a href="vild_zoo.html" class="project" role="button" tabindex="0">
-                    <img src="Media/Vild/poster1.png" alt="Vild Zoo Poster" class="graphic-design-image">
-                    <h4>Vild Zoo</h4>
-                </a>
-            </div>
-        </div>
-
-        <div id="uiux-design" class="project-category">
-            <h3>UI/UX Design</h3>
-            <br>
-            <div class="projects-grid">
-                <a href="https://goyarzunb.github.io/northwestern_rugby/" class="project" role="button">
-                    <img src="Media/Website Screenshot.png" alt="Northwestern Rugby Website Screenshot" class="project-image">
-                    <h4>Northwestern Rugby Website</h4>
-                </a>
-            </div>
-        </div>
-
-        <div id="human-centered-design" class="project-category">
-            <h3>Human Centered Design</h3>
-            <br>
-            <div class="projects-grid">
-                <a href="flap_mask.html" class="project" role="button" tabindex="0">
-                    <img src="Media/Flap Mask/d39d70_d2d86157ce644a95a8d1f2ad9558804c~mv2.jpg" alt="User Testing Flap Mask" class="project-image">
-                    <h4>Flap Mask</h4>
-                </a>
-
-                <a href="rice_spinner.html" class="project" role="button" tabindex="0">
-                    <img src="Media/Rice Spinner/d39d70_137e577172ed43d58c8e8e1060ffe001~mv2.png" alt="User Testing Rice Spinner" class="project-image">
-                    <h4>Rice Spinner</h4>
-                </a>
-            </div>
-        </div>
-
-        <div id="sketches" class="project-category">
-            <h3>Sketches - DSGN 320: Introduction to Industrial Design Methods</h3>
-            <br>
-            <div class="projects-grid">
-                <a href="shoe_design_sketches.html" class="project" role="button" tabindex="0">
-                    <img src="Media/Shoe/34.png" alt="Shoe Sketch" class="project-image">
-                    <h4>Shoes</h4>
-                </a>
-
-                <a href="furniture_design_sketches.html" class="project" role="button" tabindex="0">
-                    <img src="Media/Furniture/30.png" alt="Night Stand Sketch" class="project-image">
-                    <h4>Furniture</h4>
-                </a>
-
-                <a href="bus_stop_sketches.html" class="project" role="button" tabindex="0">
-                    <img src="Media/Bus Stop/14.png" alt="Bus Stop Sketch" class="project-image">
-                    <h4>Bus Stops</h4>
-                </a>
-
-                <a href="misc_sketches.html" class="project" role="button" tabindex="0">
-                    <img src="Media/Misc/1.png" alt="Hot Glue Gun Sketch" class="project-image">
-                    <h4>Miscellaneous Sketches</h4>
-                </a>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="about">
-        <div class="about-container">
-            <img src="Media/IMG_2474.jpg" alt="Gabriela's Picture">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I am an international student from Chile studying Mechanical Engineering at Northwestern University. I am passionate about engineering design, UI/UX design, and graphic design. I have been involved in various projects that aim to improve user experience and solve real-world problems.</p>
-                <p>For as long as I can remember, I've been fascinated by the intersection of creativity and technology. My portfolio showcases my skills and dedication to creating impactful designs.</p>
-                <p>Take a look at my projects, and feel free to reach out if you'd like to collaborate or learn more about my work.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="connect">
-            <button onclick="location.href='Media/Resume - Gabriela Oyarzun Batlle.pdf'">My Resume</button>
-            <a href="mailto:gabrielabatlle2025@u.northwestern.edu" class="btn btn-warning email-button" role="button">Email me</a>
-            <a href="https://www.linkedin.com/in/gabriela-oyarzun-batlle/"><button type="button">Let's connect on LinkedIn!</a>
-        </div>
-    </footer>
-    <script type="text/javascript" src="javascript/main.js"></script>
-</body>
+        <!-- End Page Wrap -->
+        
+        
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>        
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+        <script type="text/javascript" src="js/gmap3.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript" src="js/contact-form.js"></script>
+        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>       
+        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+        
+    </body>
 </html>
