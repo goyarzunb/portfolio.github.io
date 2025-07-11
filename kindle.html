@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Works &mdash; 3D Printed Kindle Case</title>
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta charset="utf-8">
+      <meta name="author" content="Gabriela Oyarzun Batlle">
+      <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">    
+      
+      <!-- Favicons -->
+      <link rel="shortcut icon" href="Media/logo2.png">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+      
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style-responsive.css">
+      <link rel="stylesheet" href="css/animate.min.css">
+      <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href="css/magnific-popup.css"> 
+
+      <style>
+        .sketchfab-wrapper {
+          width: 100%;
+          height: 100%;
+          min-height: 300px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .sketchfab-wrapper iframe {
+          flex-grow: 1;
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+          .sketchfab-wrapper iframe {
+            min-height: 300px;
+          }
+        }
+
+        table.custom-table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        .custom-table thead {
+          background-color: #0B082B; /* Dark header */
+          color: #ffffff;
+        }
+
+        .custom-table tbody tr {
+          background-color: #ffffff;
+        }
+
+        .custom-table td,
+        .custom-table th {
+          border: 1px solid #ccc;
+          padding: 12px;
+          text-align: left;
+        }
+
+        .custom-table tbody td {
+          color: #333; /* text color */
+        }
+
+        .custom-hover-container {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          overflow: hidden;
+          border-radius: 2%;
+        }
+
+        .custom-hover-img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2%;
+        }
+
+        /* Caption style mimicking index hover behavior */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        /* Slide up on hover */
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          max-width: 800px;         /* Set your fixed width */
+          height: 500px;            /* Fixed height */
+          margin: 40px auto;
+          overflow: hidden;
+          background-color: white;  /* Background to match your layout */
+          border-radius: 10px;
+          box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+        }
+
+        .carousel-track {
+          display: flex;
+          height: 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-slide {
+          min-width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .custom-hover-container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .custom-hover-img {
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          display: block;
+        }
+
+        /* Caption style for hover */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+
+        .hover-source {
+          font-size: 0.8rem;
+          font-weight: 400;
+          display: block;
+          color: #333;
+          margin-top: 0.3rem;
+        }
+
+        /* Arrows */
+        .carousel-btn {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: #000;
+          font-size: 2rem;
+          cursor: pointer;
+          z-index: 10;
+        }
+
+        .carousel-btn.left {
+          left: 10px;
+        }
+
+        .carousel-btn.right {
+          right: 10px;
+        }
+
+        .fixed-height {
+          height: 600px;
+        }
+
+      </style>
+
+    </head>
+
+    <body class="appear-animate">
+        
+        <!-- Page Loader -->        
+        <div class="page-loader">
+            <div class="loader">Loading...</div>
+        </div>
+        <!-- End Page Loader -->
+        
+        <!-- Navigation panel -->
+        <nav class="main-nav transparent stick-fixed">
+            <div class="full-wrapper relative clearfix">
+                <div class="nav-logo-wrap local-scroll">
+                    <a href="#top" class="logo">
+                        <img src="Media/logo-name2.png" alt="" />
+                    </a>
+                </div>
+                <div class="mobile-nav">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="font-variant clearlist scroll-nav local-scroll">
+                        <li class="active"><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#portfolio">My Works</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navigation panel -->
+          
+            
+        <!-- Head Section -->
+        <section class="page-section bg-dark-alfa-30" style="background-image: url('Media/Kindle_Case/cover.JPG');">
+            <div class="relative container align-left">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="work-title-font mb-20 mb-xs-0">Kindle Case</h1>
+                        <div class="hs-line-4 font-alt">
+                            3D Printed Part Design and Manufacturing
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Head Section -->
+
+            
+            
+        <!-- Section -->
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+                
+            <div class="col-md-8 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h2 class="font-variant align-left">Project Summary</h2>
+                        <div class="section-text">
+                          For my <strong>DSGN 348 Advanced Topics: Rapid Prototyping</strong> final project, I designed and prototyped a custom-fit case for my Kindle using an iterative product development process. I initially began with a phone case design but pivoted to a Kindle case after realizing I had more personal motivation and need for it.
+                        </div>
+                      </div>
+
+                      <div class="custom-hover-container">
+                        <img src="Media/Kindle_Case/IMG_1398.jpg" alt="CNCed Molds" class="custom-hover-img">
+                        <div class="custom-hover-caption">
+                            3D Printed Kindle Case
+                            <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                                Picture by Emiliano Ghislieri M.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Item --> 
+            <div class="col-md-4 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-left">
+                    <h2 class="font-variant align-left">Skills</h2>
+                </div>
+                <div class="skills-section font-variant align-left">
+                    <div class="skill-bubble">CAD Modeling (Solidworks)</div>
+                    <div class="skill-bubble">Iterative Prototyping</div>
+                    <div class="skill-bubble">Design for Manufacturability (DFM)</div>
+                    <div class="skill-bubble">FormLabs SLA Printing (Flexible80 Resin)</div>
+                    <div class="skill-bubble">Stratasys PolyJet Printing (PLXA9985-DM multi-material)</div>
+                    <div class="skill-bubble">Material Selection</div>
+                    <div class="skill-bubble">User-Centered Design</div>
+                    <div class="skill-bubble">Visual Styling in CAD</div>
+                    <div class="skill-bubble">Cleaning, post-curing, and refining printed parts</div>
+                    
+                </div>
+            </div>
+            <!-- End Features Item -->
+        </div>
+        <!-- End Features Grid -->
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+          <div class="col-md-12 col-sm-12 mb-sm-40 mb-xs-30">
+              <div class="alt-features-item align-left">
+                <h2 class="font-variant align-left">Design Process Overview</h2>
+                <div class="section-text">This project is the physical compilation of hours of ideating, hand sketching, CAD, and prototype testing. At first, I started working on a phone case, for which I came up with the following designs:</div>
+              </div>
+
+              <div class="custom-hover-container">
+                  <img src="Media/Kindle_Case/sketches.png" alt="Hand-drawn iPad Sketches for Phone Case" class="custom-hover-img">
+                  <div class="custom-hover-caption">
+                      Hand-drawn iPad Sketches for Phone Case
+                      <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                        
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+          <div class="section-text">I began by downloading an iPhone 11 CAD model from GrabCAD and placing it into an assembly with a larger rectangular block to represent the case. The block was made 4mm wider and longer, and 2mm taller than the phone to allow for a 2mm wall thickness. I aligned the phone and case using a coincident constraint on their top center faces, then used a cavity feature to hollow out the case interior to match the phone’s shape. I filleted the edges, removed excess material, and added button cutouts by sketching on the sides and extruding features based on the phone model.</div>
+
+          <div class="font-variant align-left">
+            <h3><strong>Iterative Prototyping</strong></h3>
+          </div>
+          <div class="section-text">
+            <ul>
+              <li>I first prototyped the case using FormLabs Flexible80 resin. It fit poorly and was too flimsy.</li>
+              <li>I iterated by switching to a stronger PolyJet material (PLXA9985-DM), which significantly improved the fit and structure.</li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <div class="custom-hover-container">
+                  <img src="Media/Kindle_Case/phone.png" alt="Phone case and phone assembly" class="custom-hover-img">
+                  <div class="custom-hover-caption">
+                       Phone case and phone assembly
+                      <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="custom-hover-container">
+                  <img src="Media/Kindle_Case/case1.png" alt="Flexible80 resin case" class="custom-hover-img">
+                  <div class="custom-hover-caption">
+                       Flexible80 resin case
+                      <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="custom-hover-container">
+                  <img src="Media/Kindle_Case/case2.png" alt="PLXA9985-DM phone case iteration" class="custom-hover-img">
+                  <div class="custom-hover-caption">
+                       PLXA9985-DM phone case iteration
+                      <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+        </div>
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+          <div class="section-text">Then, I found myself not feeling inspired for this project, and I realized it was because I really love the phone case I currently have, and I did not want another one. So I decided to make a case for my Kindle, which I needed one for. I went through the exact same process with this case: found a model online of the kindle, created a cavity in an assembly, printed in Flexible80, and then in PLXA9985-DM.
+          </div>
+
+          <br>
+
+          <div class="col-md-6">
+            <div class="custom-hover-container">
+                  <img src="Media/Kindle_Case/cad.png" alt="Kindle Case Dimensions" class="custom-hover-img">
+                  <div class="custom-hover-caption">
+                       Kindle Case Dimensions
+                      <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="custom-hover-container">
+                  <img src="Media/Kindle_Case/casecad1.png" alt="Kindle Case CAD" class="custom-hover-img">
+                  <div class="custom-hover-caption">
+                       Kindle Case CAD
+                      <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+          <div class="section-text">After I finished modeling the case shell, I started thinking about which one of the three designs I wanted for the back of the case. I decided to not go with any of those but rather a patterned design, which I thought would be simpler. The design I chose was based on an art piece made by M.C. Escher called "Day and Night". 
+          </div>
+
+          <br>
+
+          <div class="custom-hover-container fixed-height">
+            <img src="Media/Kindle_Case/escher.png" alt="Kindle Case CAD" class="custom-hover-img">
+            <div class="custom-hover-caption">
+                 Day and Night
+                <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">By M.C. Escher
+                </div>
+              </div>
+          </div>
+  
+          <div class="section-text">
+            I printed the first iteration with Flexible80 resin, and as expected the case came out to be too big and flimsy, and broke pretty easily. My second Iteration was made of PLXA9985-DM to test some colors on the surface to see if I liked them, and tested one bird to see how it looked.
+          </div>
+        </div>
+
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+            <div class="font-variant mt-40 align-left"></div>
+            <h2 class="font-variant align-left">Overview of User Feedback</h2>
+
+          <div class="section-text">Based on user feedback, I decided to add more material on the side walls of the case (on design 2), i.e., make it taller, because it seemed to be too short. I also added the notches on the top face of the case so it would press fit firmly against the top face of the Kindle, since the second iteration raised concerns about being a little bit of a loose fit. This was a great addition to the design as it fixed the fit, and now it can go into the kindle and fit nicely in it, not too tight but not too loose.</div>
+
+          <br>
+
+          <div class="section-text">Regarding the design, the only feedback I received was that it was too much of an overkill and that it seemed too hard, but users seemed to like it regardless. I received ideas on how to pattern the design, which helped me out tremendously. </div>
+        </div>
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+            <div class="font-variant mt-40 align-left"></div>
+            <h2 class="font-variant align-left">Iterations</h2>
+          
+          <div class="align-center col-md-4 ">
+            <div class="custom-hover-container">
+                  <img src="Media/Kindle_Case/it1.png" alt="Kindle Case CAD" class="custom-hover-img">
+                  <div class="custom-hover-caption">
+                       Flexible80 resin case
+                      <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                      </div>
+                  </div>
+              </div>
+          </div>
+        
+          <div class="align-center col-md-4 ">
+              <div class="custom-hover-container">
+                    <img src="Media/Kindle_Case/it2.jpg" alt="Kindle Case CAD" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                         PLXA9985-DM case first iteration
+                        <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="align-center col-md-4 ">
+            <div class="custom-hover-container">
+                  <img src="Media/Kindle_Case/it3.jpg" alt="PLXA9985-DM case second iteration" class="custom-hover-img">
+                  <div class="custom-hover-caption">
+                       PLXA9985-DM case second and final iteration
+                      <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </div>
+
+
+        
+
+          
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+            <div class="font-variant mt-40 align-left"></div>
+            <h2 class="font-variant align-left">Key Takeaways / Conclusions:</h2>
+            <div class="section-text align-left">I learned how to do linear patterns on features! I spent an excessive amount of time on the bird design. It was specially hard because I tried extruding single line splines and then thickened them. That took a very long time, and I had to them one by one. Then I decided to do one spline for the body of the bird, extruded it, and patterned it. Then I changed the color of the back face of the case to give a different color for the birds looking at the other side without having to do another body and pattern it. After that, I decided to use straight slots for the black thin lines on the birds, and extrude them to then linear pattern them and put them on top of the bird’s bodies to finish creating the whole bird. 
+ 
+            </div>
+            <br>
+            <div class="section-text align-left">
+
+              Additionally, I became very comfortable with using both the FormLab resin and PolyJet printers, including how to use the desktop apps to finish configuring the print for materials, orientation of the print, etc. And setting up the machine so it’s ready to run, the cleaning of both machines, and the post-processing of the parts: putting in the washer, curing, and taking off supports for the resin-based ones, and waterjetting the ones that came out of the PolyJet printers. 
+
+            </div>
+        </div>
+
+        
+      
+
+      <!-- Footer -->
+      <footer class="footer">
+          <div class="container">
+              
+              <!-- Footer Logo -->
+              <div class="mb-10 fadeInUp responsive-footer-logo" alt="" data-wow-duration="1.5s">
+                  <a href="#top"><img src="Media/Logo2.png"/></a>
+              </div>
+              <!-- End Footer Logo -->
+
+              <!-- Footer Text -->
+              <div class="footer-text">
+                  
+                  <!-- Copyright -->
+                  <div class="footer-copy font-alt">
+                      <a href="http://themeforest.net/user/theme-guru/portfolio" target="_blank">&copy; Rhythm 2015</a>.
+                  </div>
+                  <!-- End Copyright -->
+                                      
+              </div>
+           </div>
+      </footer>
+
+
+
+
+    <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>        
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+        <script type="text/javascript" src="js/gmap3.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript" src="js/contact-form.js"></script>
+        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
+        <script>
+          let currentSlideIndex = 0;
+
+          function moveCarousel(direction) {
+            const track = document.getElementById("carouselTrack");
+            const slides = document.querySelectorAll(".carousel-slide");
+            const totalSlides = slides.length;
+
+            currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+          }
+        </script>
+        <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.carousel-slide');
+          const track = document.querySelector('.carousel-track');
+          const totalSlides = slides.length;
+          let autoSlideInterval;
+
+          function showSlide(index) {
+            if (!track || !slides.length) return;
+
+            currentSlide = (index + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+          }
+
+          function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+              showSlide(currentSlide + 1);
+            }, 4000); // change time if needed
+          }
+
+          function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+          }
+
+          // Navigation buttons
+          document.querySelector('.carousel-btn.left')?.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+          });
+
+          document.querySelector('.carousel-btn.right')?.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+          });
+
+          // Pause on hover
+          const carouselContainer = document.querySelector('.carousel-container');
+          if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+            carouselContainer.addEventListener('mouseleave', startAutoSlide);
+          }
+
+          // Start the carousel
+          showSlide(0);
+          startAutoSlide();
+        </script>
+      
+    </body>
+</html>
+
+                  
+</body>
+</html>

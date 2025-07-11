@@ -24,10 +24,196 @@
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/vertical-rhythm.min.css">
         <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">    
+        <link rel="stylesheet" href="css/magnific-popup.css"> 
 
+        <style>
+          .sketchfab-wrapper {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+          }
 
-</head>
+          .sketchfab-wrapper iframe {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+          }
+
+          @media (max-width: 768px) {
+            .sketchfab-wrapper iframe {
+              min-height: 300px;
+            }
+          }
+
+          table.custom-table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          .custom-table thead {
+            background-color: #0B082B; /* Dark header */
+            color: #ffffff;
+          }
+
+          .custom-table tbody tr {
+            background-color: #ffffff;
+          }
+
+          .custom-table td,
+          .custom-table th {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+          }
+
+          .custom-table tbody td {
+            color: #333; /* text color */
+          }
+
+        .custom-hover-container {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          overflow: hidden;
+          border-radius: 2%;
+        }
+
+        .custom-hover-img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2%;
+        }
+
+        /* Caption style mimicking index hover behavior */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        /* Slide up on hover */
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          max-width: 800px;         /* Set your fixed width */
+          height: 500px;            /* Fixed height */
+          margin: 40px auto;
+          overflow: hidden;
+          background-color: white;  /* Background to match your layout */
+          border-radius: 10px;
+          box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+        }
+
+        .carousel-track {
+          display: flex;
+          height: 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-slide {
+          min-width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .custom-hover-container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .custom-hover-img {
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          display: block;
+        }
+
+        /* Caption style for hover */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+
+        .hover-source {
+          font-size: 0.8rem;
+          font-weight: 400;
+          display: block;
+          color: #333;
+          margin-top: 0.3rem;
+        }
+
+        /* Arrows */
+        .carousel-btn {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: #000;
+          font-size: 2rem;
+          cursor: pointer;
+          z-index: 10;
+        }
+
+        .carousel-btn.left {
+          left: 10px;
+        }
+
+        .carousel-btn.right {
+          right: 10px;
+        }
+
+        </style>
+    </head>
+
     <body class="appear-animate">
         
         <!-- Page Loader -->        
@@ -35,183 +221,432 @@
             <div class="loader">Loading...</div>
         </div>
         <!-- End Page Loader -->
-            
-            <!-- Navigation panel -->
-            <nav class="main-nav dark transparent stick-fixed">
-                <div class="full-wrapper relative clearfix">
-                    <!-- Logo ( * your text or image into link tag *) -->
-                    <div class="nav-logo-wrap local-scroll">
-                        <a href="#top" class="logo">
-                            <img src="Media/logo1.png">
-                        </a>
-                    </div>
-                    <div class="mobile-nav">
-                        <i class="fa fa-bars"></i>
-                    </div>
-                    <!-- Main Menu -->
-                    <div class="inner-nav desktop-nav">
-                        <ul class="clearlist scroll-nav local-scroll">
-                            <li class="active"><a href="index.html#home">Home</a></li>
-                            <li><a href="index.html#portfolio">Portfolio</a></li>
-                            <li><a href="index.html#contact">Contact</a></li>
-                            <li><a href="index.html#about">About</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- End Navigation panel -->
-            
-            
-            <!-- Head Section -->
-            <section class="page-section bg-dark-alfa-30" style="background-image: url('Media/CNC mill bracket/cnc mill.jpeg');">
-                <div class="relative container align-left">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h1 class="work-title-font mb-20 mb-xs-0">CNC Mill Bracket</h1>
-                            <div class="hs-line-4 font-alt">
-                                Engineering Design and Testing
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End Head Section -->
-
-            
-            
-            <!-- Section -->
-            <div class="container relative mt-40 mb-20 mb-xs-10">
         
-                <!-- Features Grid -->
-                <div class="row alt-features-grid mb-80 mb-xs-40">
-                    
-                    <!-- Text Item -->
-                    <div class="col-md-8 col-sm-6 mb-sm-50 mb-xs-30">
-                        <div class="alt-features-item align-center">
-                            <div class="align-left">
-                                <h4 class="alt-features-title">About</h4>
-                                <div class="alt-features-descr">A CNC milling machine is a powerful tool, but every great tool needs <strong>precision</strong> and <strong>stability</strong> to function at its best. That’s where the bracket comes in. This component was designed to securely mount onto the mill and <strong>stabilize the spindle</strong>, ensuring it stays firmly in place during cutting operations. Without a reliable bracket, vibrations and deflection can lead to inaccuracies in machining, wasted material, or even tool failure. The challenge? Balancing strength, minimal deflection, and lightweight design to ensure the bracket could perform under load. Through careful analysis and iterative design, we crafted a bracket that provides the perfect blend of stability and weight efficiency!</div>
-                            </div>
-                        </div>
-                    </div>
-                       
-                    <!-- Features Item -->
-                    <div class="col-sm-3">
-                        <div class="alt-features-item align-left">
-                            <h4 class="alt-features-title">Skills</h4>
-                        </div>
-                        <div class="skills-section align-left">
-                          <div class="skill-bubble">SIEMENS NX</div>
-                          <div class="skill-bubble">Finite Element Analysis (FEA)</div>
-                          <div class="skill-bubble">Research</div>
-                          <div class="skill-bubble">Collaboration</div>
-                          <div class="skill-bubble">Iterative Design</div>
-                          <div class="skill-bubble">Static Load Analysis</div>
-                          <div class="skill-bubble">Material Optimization</div>
-
-                        </div>
-
-                    </div>
-                    <!-- End Features Item -->
-                    
+        <!-- Navigation panel -->
+        <nav class="main-nav transparent stick-fixed">
+            <div class="full-wrapper relative clearfix">
+                <!-- Logo ( * your text or image sinto link tag *) -->
+                <div class="nav-logo-wrap local-scroll">
+                    <a href="#top" class="logo">
+                        <img src="Media/Portfolio_Logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="mobile-nav">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="font-variant clearlist scroll-nav local-scroll">
+                        <li class="active"><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#portfolio">My Works</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
                 </div>
             </div>
-            <!-- End Features Grid -->
+        </nav>
+        <!-- End Navigation panel -->
             
+            
+        <!-- Head Section -->
+        <section class="page-section bg-dark-alfa-30" style="background-image: url('Media/CNC mill bracket/banner2.png');">
+            <div class="relative container align-left">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="work-title-font mb-20 mb-xs-0">CNC Mill Bracket</h1>
+                        <div class="hs-line-4 font-alt">
+                            D&D
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Head Section -->
 
-            <div class="container mt-40 mb-20">
-            <!-- What Section -->
-                <div class="row align-items-center mb-80">
-                    <!-- Text on the Left -->
-                    <div class="col-md-6">
-                        <div class="text-section">
-                            <h4 class="alt-features-title">What:</h4>
-                            <div class="alt-features-descr">
-                                <ul>
-                                    <li><strong>Redesign</strong> and test a mounting bracket that can be attached to a mini CNC milling machine, to <strong>accommodate a sensor</strong>.</li>
-                                    <li>Forces to be designed for:
-                                        <ul>
-                                            <li>X direction - 100N</li>
-                                            <li>Y direction - 100N</li>
-                                            <li>Z direction - 100N</li>
-                                        </ul>
-                                    </li>
-                                    <li>Performance goals:
-                                        <ul>
-                                            <li>Deflection:
-                                                <ul>
-                                                    <li>X direction - ±1mm</li>
-                                                    <li>Y direction - ±1mm</li>
-                                                    <li>Z direction - ±1mm</li>
-                                                </ul>
-                                            </li>
-                                            <li>Weight: Reduce as much as possible from the original weight (400g).</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+            
+            
+        <!-- Section -->
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+                
+            <div class="col-md-8 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h2 class="font-variant align-left">Project Summary</h2>
+                        <div class="section-text">As part of <strong>ME 240: Introduction to Mechanical Design and Manufacturing</strong>, I was tasked with designing a custom <strong>mounting bracket</strong> for a <em>SainSmart Genmitsu 3020-Pro Max CNC milling machine</em>. The bracket had to accommodate a sensor while ensuring mechanical performance under strict criteria.</div>
+                    </div>
+
+                    <div class="custom-hover-container">
+                        <img src="Media/CNC mill bracket/pic.png" alt="Bracket Isometric Render" class="custom-hover-img">
+                        <div class="custom-hover-caption">
+                            SainSmart Genmitsu 3020-Pro Max CNC milling machine wirh bracket
+                            <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                                Source: ME 240 – Lab 5 Handout, Northwestern University
                             </div>
                         </div>
                     </div>
-                <!-- Image on the Right -->
-                <div class="col-md-6">
-                    <img src="Media/CNC mill bracket/cnc_mill_1.png" alt="What Image" class="img-fluid rounded">
                 </div>
             </div>
 
-                <!-- How Section -->
-                <div class="row align-items-center flex-row-reverse mb-80">
-                    <!-- Text on the Right -->
-                    <div class="col-md-6">
-                        <div class="text-section">
-                            <h4 class="alt-features-title">How:</h4>
+
+                   
+            <!-- Features Item --> 
+            <div class="col-md-4 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-left">
+                    <h2 class="font-variant align-left">Skills</h2>
+                </div>
+                <div class="skills-section font-variant align-left">
+                    <div class="skill-bubble">SIEMENS NX</div>
+                    <div class="skill-bubble">Finite Element Analysis (FEA)</div>
+                    <div class="skill-bubble">Design for Manufacturability (DFM)</div>
+                    <div class="skill-bubble">Mechanical Design under Constraints</div>
+                    <div class="skill-bubble">Iterative Design & Testing</div>
+                    <div class="skill-bubble">Static Load Analysis</div>
+                    <div class="skill-bubble">Material Optimization</div>
+                    <div class="skill-bubble">Simulation-Driven Design</div>
+                    <div class="skill-bubble">Clear Documentation & Reporting</div>
+                    
+                </div>
+            </div>
+            <!-- End Features Item -->
+        </div>
+        <!-- End Features Grid -->
+
+        <div class="container relative mt-0 mb-0 mb-xs-10">
+            <div class="container mt-0 mb-0">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Design Goals</h3>
+                        <div class="section-text">
                             <ul>
-                                <li><strong>Calculated deflections</strong> in X, Y, and Z directions by hand.</li>
-                                <li>Calculated both deflections and stresses in the X, Y, and Z directions with <strong>FEA</strong>.</li>
-                                <li>Sent designs to be <strong>3D printed</strong> and <strong>tested them</strong>.</li>
-                                <li>Decided to keep the design that weighed less and had the least deflection when subjected to a 100 N force (in all three directions).</li>
+                                <li>Redesign the spindle holder to accommodate a new sensor without compromising machine functionality.</li>
+                                <li>Maintain cutting performance by minimizing deflection under load.</li>
+                                <li>Reduce bracket weight as much as possible from original design (400 gr).</li>
+                                <li>Ensure ease of assembly and disassembly of the bracket.</li>
                             </ul>
                         </div>
-                    </div>
-                    <!-- Image on the Left -->
-                    <div class="col-md-6">
-                        <img src="Media/CNC mill bracket/fea.png" alt="How Image" class="img-fluid rounded">
                     </div>
                 </div>
+           </div>
+       </div>
 
-                <!-- Results Section -->
-                <div class="row align-items-center mb-80">
-                    <!-- Text on the Left -->
-                    <div class="col-md-6">
-                        <div class="text-section">
-                            <h4 class="alt-features-title">Result:</h4>
+       <div class="container relative mt-0 mb-0 mb-xs-10">
+            <div class="container mt-0 mb-0">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Performance Criteria</h3>
+                        <div class="section-text">
                             <ul>
-                                <li>The final design fulfilled the design requirements:</li>
-                                <li><strong>Weight</strong>: 193 gr.</li>
-                                <li>Deflection:
-                                    <ul>
-                                        <li>X direction - 1.77 mm</li>
-                                        <li>Y direction - didn't test.</li>
-                                        <li>Z direction - ± 0.64 mm</li>
-                                    </ul>
-                                </li>
+                                <li>Resist cutting forces of <strong>100 N</strong> in the <strong>X, Y, and Z</strong> directions.</li>
+                                <li>Limit deflection at the spindle tip to <strong>±2 mm</strong> in each direction (X, Y, Z).</li>
+                                <li>Material: <strong>Nylon 12</strong> (E = 1850 MPa, G = 660 MPa) using SLS 3D printing.</li>
                             </ul>
                         </div>
                     </div>
-                    <!-- Image on the Right -->
-                    <div class="col-md-6">
-                        <img src="Media/CNC mill bracket/dwg.png" alt="Results Image" class="img-fluid rounded">
+                </div>
+           </div>
+       </div>
+
+       <div class="container relative mt-0 mb-0 mb-xs-10">
+            <div class="container mt-0 mb-0">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Mounting & Geometry Constraints</h3>
+                        <div class="section-text">
+                            <ul>
+                                <li>Mount to an M5 bolt grid with proper clearance and tool access.</li>
+                                <li>Clamp a <strong>52 mm diameter spindle</strong>, centered <strong>100 mm from the mounting face</strong>.</li>
+                                <li>Fit within a bounding box: <strong>80 mm (X) × 132.5 mm (Y) × 52 mm (Z)</strong>.</li>
+                                <li>Avoid the sensor pocket region.</li>
+                                <li>Use simple cross sections for easier beam bending and FEA validation.</li>
+                            </ul>
+                            After all my group and I had this criteria and constraints jolted down, we started designing our first version.
+                        </div>
+
+                    </div>
+                </div>
+           </div>
+       </div>
+
+       <div class="container relative mt-40 mb-20 mb-xs-10">
+  
+          <!-- Section Title (Full Width) -->
+          <h2 class="font-variant align-left">Design Process</h2>
+
+          <!-- Row: Text + Sketchfab -->
+          <div class="row d-flex align-items-start">
+            
+            <!-- Text Column -->
+            <div class="col-md-8 col-sm-12 mb-sm-40 mb-xs-30">
+              <h3 class="font-variant align-left">Version 1</h3>
+              <div class="section-text">
+                <ul>
+                  <li>Created an initial bracket geometry based on hand-calculated forces and stress distributions.</li>
+                  <li>Ran FEA simulations in all three axes (X, Y, Z) to validate stress and displacement ranges. Noted high stress concentrations at the base/neck intersection ➝ added fillets and extra material at the spindle mount.</li>
+                  <li>Sent in for manufacturing and tested it. The process simulated real-world machining forces and included three distinct directional load tests: X, Y, and Z.</li>
+                  <ul>
+                    <li><strong>Setup:</strong> The bracket was mounted to a CNC Z-axis holder using M5 bolts, ensuring full contact with flat mounting surfaces to avoid stress concentrations or fractures.</li>
+                    <li><strong>Load Testing:</strong> Forces (~100 N) were applied separately in X, Y, and Z directions using calibrated load cells. Plunge indicators were used to measure deflection at two reference points before and after force application.</li>
+                    <li><strong>Measurement Protocol:</strong> Measurements were taken without moving the indicators between readings to maintain accuracy. TAs assisted in verifying displacement using standard mechanical gauges.</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Sketchfab Column -->
+            <div class="col-md-4 col-sm-12 mb-sm-20 mb-xs-30 d-flex align-items-start justify-content-center">
+              <div class="sketchfab-embed-wrapper w-100">
+                <iframe
+                  title="Carillo_Castro_Oyarzun_Lab9"
+                  frameborder="0"
+                  allowfullscreen
+                  mozallowfullscreen="true"
+                  webkitallowfullscreen="true"
+                  allow="autoplay; fullscreen; xr-spatial-tracking"
+                  xr-spatial-tracking
+                  execution-while-out-of-viewport
+                  execution-while-not-rendered
+                  web-share
+                  src="https://sketchfab.com/models/fa635721091d4b4e9d711d0fe6343165/embed"
+                  style="width: 100%; height: 100%; min-height: 400px; border: none;">
+                </iframe>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+
+            <h3 class="font-variant mt-40 align-left">Test Results</h3>
+            <div class="table-responsive">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Test Metric</th>
+                    <th>Result</th>
+                    <th>Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Max Deflection (X)</td>
+                    <td>~1.2 mm</td>
+                    <td>Within spec (≤ 2 mm)</td>
+                  </tr>
+
+                  <tr>
+                    <td>Max Deflection (Z)</td>
+                    <td>~1.6 mm</td>
+                    <td>Matches hand-calculated prediction</td>
+                  </tr>
+
+                  <tr>
+                    <td>Max Stress (Y-axis)</td>
+                    <td>~85 MPa</td>
+                    <td>Concentrated at neck-to-base transition</td>
+                  </tr>
+    
+                  <tr>
+                    <td>Safety Factor</td>
+                    <td>~2.1</td>
+                    <td>Acceptable for non-critical mounting part</td>
+                  </tr>
+
+                  <tr>
+                    <td>Weight</td>
+                    <td>204.2 g</td>
+                    <td>Reduced in Version 2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+        </div>
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+
+            <div class="col-md-8 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h2 class="font-variant align-left"></h2>
+                        <h3 class="font-variant align-left">Version 2 </h3>
+                        <div class="section-text">
+                            <ul>
+                                <li>Shifted structural support from neutral axis (mid-body) to top and bottom edges.</li>
+                                <li>Added top struts and removed excess material using cutouts and curves to reduce weight.</li>
+                                <li><strong>Weight:</strong> 193g</li>
+                                <ul>
+                                    <li><strong>Tradeoff:</strong> Slight increase in X-deflection, but still within spec (≤ 2mm)</li>
+                                </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
+
+            <div class="col-md-4 col-sm-6 mb-sm-40 mb-xs-30 d-flex align-items-stretch">
+                <div class="alt-features-item align-left mt-30 sketchfab-wrapper">
+                    <iframe
+                      title="Carillo_Castro_Oyarzun_Lab9"
+                      frameborder="0"
+                      allowfullscreen
+                      mozallowfullscreen="true"
+                      webkitallowfullscreen="true"
+                      allow="autoplay; fullscreen; xr-spatial-tracking"
+                      xr-spatial-tracking
+                      execution-while-out-of-viewport
+                      execution-while-not-rendered
+                      web-share
+                      src="https://sketchfab.com/models/0ba488509be94bbc896d470ab962962a/embed">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+
+            <h3 class="font-variant mt-40 align-left">Test Results</h3>
+            <div class="table-responsive">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Test Metric</th>
+                    <th>Result</th>
+                    <th>Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Max Deflection (X)</td>
+                    <td>~1.8 mm</td>
+                    <td>Increased slightly, still within spec (≤ 2 mm)</td>
+                  </tr>
+                  <tr>
+                    <td>Max Deflection (Z)</td>
+                    <td>~1.6 mm</td>
+                    <td>No change from Version 1</td>
+                  </tr>
+                  <tr>
+                    <td>Max Stress (Y-axis)</td>
+                    <td>~83 MPa</td>
+                    <td>Stress more evenly distributed due to struts</td>
+                  </tr>
+                  <tr>
+                    <td>Material</td>
+                    <td>Aluminum 6061-T6</td>
+                    <td>Same as Version 1</td>
+                  </tr>
+                  <tr>
+                    <td>Safety Factor</td>
+                    <td>~2.2</td>
+                    <td>Slight improvement from added supports</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>193 g</td>
+                    <td>Optimized with cutouts and curves</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+            <div class="font-variant mt-40 align-left"></div>
+            <h2 class="font-variant align-left">Key Takeaways / Conclusions:</h2>
+            <div class="section-text align-left">Through iterative design, simulation, and hands-on testing, we successfully developed and validated a CNC spindle bracket capable of withstanding directional machining loads. Our first version revealed critical stress concentrations, which we addressed in Version 2 through geometry refinement and material redistribution. Final testing in X, Y, and Z axes confirmed the design’s structural integrity, with measured displacements closely aligning with FEA predictions. And what we were most proud of: weight reduction - we reduced the weight of the bracket to <strong>48.25% of its original design weight</strong>. This project reinforced our understanding of structural mechanics, precision mounting, and the practical nuances of translating digital designs into functional, manufacturable components.</div>
+        </div>
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+            <div class="font-variant mt-40 align-left"></div>
+            <h2 class="font-variant align-left">Project Gallery:</h2>
+
+            <div class="carousel-container">
+              <button class="carousel-btn left">&#10094;</button>
+              <div class="carousel-track">
+                <div class="carousel-slide">
+                  <div class="custom-hover-container">
+                    <img src="Media\CNC mill bracket\dwg_v1.png" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                      V1 Drawing<br><span class="hover-source">by Gabriela Oyarzun B, Valeria Castro M, and Tadeo Carrillo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <div class="custom-hover-container">
+                    <img src="Media\CNC mill bracket\x-disp.png" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                      V1 x-axis displacement FEA<br><span class="hover-source">by Gabriela Oyarzun B, Valeria Castro M, and Tadeo Carrillo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <div class="custom-hover-container">
+                    <img src="Media\CNC mill bracket\y-disp.png" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                      V1 y-axis displacement FEA<br><span class="hover-source">by Gabriela Oyarzun B, Valeria Castro M, and Tadeo Carrillo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <div class="custom-hover-container">
+                    <img src="Media\CNC mill bracket\z-disp.png" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                      V1 z-axis displacement FEA<br><span class="hover-source">by Gabriela Oyarzun B, Valeria Castro M, and Tadeo Carrillo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <div class="custom-hover-container">
+                    <img src="Media\CNC mill bracket\Screenshot 2025-07-05 160620.png" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                      Testing Set-up Illustration<br><span class="hover-source">ME 240 – Lab 5 Handout, Northwestern University</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <div class="custom-hover-container">
+                    <img src="Media\CNC mill bracket\cnc_mill_1.png" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                      Testing Set-up<br><span class="hover-source">My Cameraroll</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <div class="custom-hover-container">
+                    <img src="Media\CNC mill bracket\dwg_v2.png" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                      V2 Drawing<br><span class="hover-source">by Gabriela Oyarzun B, Valeria Castro M, and Tadeo Carrillo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Repeat .carousel-slide blocks -->
+              </div>
+              <button class="carousel-btn right">&#10095;</button>
+            </div>
+        
+        </div>
+
+        
+    
+     
 
             <!-- Footer -->
-            <footer class="small-section footer pb-10">
+            <footer class="footer">
                 <div class="container">
                     
                     <!-- Footer Logo -->
-                    <div class="mb-30 fadeInUp responsive-footer-logo" alt="" data-wow-duration="1.5s">
-                        <a href="#top"><img src="Media/logo1.png"/></a>
+                    <div class="mb-10 fadeInUp responsive-footer-logo" alt="" data-wow-duration="1.5s">
+                        <a href="#top"><img src="Media/Portfolio_Logo.png"/></a>
                     </div>
                     <!-- End Footer Logo -->
 
@@ -229,19 +664,14 @@
                     
                  </div>
                  
-                 
-                 <!-- Top Link -->
-                 <div class="local-scroll">
-                     <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
-                 </div>
-                 <!-- End Top Link -->
+            
 
             </footer>
             <!-- End Foter -->
-        
-        
-        </div>
-        <!-- End Page Wrap -->
+            
+            
+            </div>
+            <!-- End Page Wrap -->
         
         
         <!-- JS -->
@@ -268,8 +698,63 @@
         <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
         <script type="text/javascript" src="js/all.js"></script>
         <script type="text/javascript" src="js/contact-form.js"></script>
-        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>        
-        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
-        
+        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
+        <script>
+          let currentSlideIndex = 0;
+
+          function moveCarousel(direction) {
+            const track = document.getElementById("carouselTrack");
+            const slides = document.querySelectorAll(".carousel-slide");
+            const totalSlides = slides.length;
+
+            currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+          }
+        </script>
+        <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.carousel-slide');
+          const track = document.querySelector('.carousel-track');
+          const totalSlides = slides.length;
+          let autoSlideInterval;
+
+          function showSlide(index) {
+            if (!track || !slides.length) return;
+
+            currentSlide = (index + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+          }
+
+          function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+              showSlide(currentSlide + 1);
+            }, 4000); // change time if needed
+          }
+
+          function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+          }
+
+          // Navigation buttons
+          document.querySelector('.carousel-btn.left')?.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+          });
+
+          document.querySelector('.carousel-btn.right')?.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+          });
+
+          // Pause on hover
+          const carouselContainer = document.querySelector('.carousel-container');
+          if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+            carouselContainer.addEventListener('mouseleave', startAutoSlide);
+          }
+
+          // Start the carousel
+          showSlide(0);
+          startAutoSlide();
+        </script>
+      
     </body>
 </html>

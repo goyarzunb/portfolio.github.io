@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Works &mdash; Bed Tray</title>
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta charset="utf-8">
+      <meta name="author" content="Gabriela Oyarzun Batlle">
+      <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">    
+      
+      <!-- Favicons -->
+      <link rel="shortcut icon" href="Media/logo2.png">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+      
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style-responsive.css">
+      <link rel="stylesheet" href="css/animate.min.css">
+      <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href="css/magnific-popup.css"> 
+
+      <style>
+        .sketchfab-wrapper {
+          width: 100%;
+          height: 100%;
+          min-height: 300px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .sketchfab-wrapper iframe {
+          flex-grow: 1;
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+          .sketchfab-wrapper iframe {
+            min-height: 300px;
+          }
+        }
+
+        table.custom-table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        .custom-table thead {
+          background-color: #0B082B; /* Dark header */
+          color: #ffffff;
+        }
+
+        .custom-table tbody tr {
+          background-color: #ffffff;
+        }
+
+        .custom-table td,
+        .custom-table th {
+          border: 1px solid #ccc;
+          padding: 12px;
+          text-align: left;
+        }
+
+        .custom-table tbody td {
+          color: #333; /* text color */
+        }
+
+        .custom-hover-container {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          overflow: hidden;
+          border-radius: 12px;
+        }
+
+        .custom-hover-img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 12px;
+        }
+
+        /* Caption style mimicking index hover behavior */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        /* Slide up on hover */
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          max-width: 800px;         /* Set your fixed width */
+          height: 500px;            /* Fixed height */
+          margin: 40px auto;
+          overflow: hidden;
+          background-color: white;  /* Background to match your layout */
+          border-radius: 10px;
+          box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+        }
+
+        .carousel-track {
+          display: flex;
+          height: 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-slide {
+          min-width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .custom-hover-container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .custom-hover-img {
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          display: block;
+        }
+
+        /* Caption style for hover */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+
+        .hover-source {
+          font-size: 0.8rem;
+          font-weight: 400;
+          display: block;
+          color: #333;
+          margin-top: 0.3rem;
+        }
+
+        /* Arrows */
+        .carousel-btn {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: #000;
+          font-size: 2rem;
+          cursor: pointer;
+          z-index: 10;
+        }
+
+        .carousel-btn.left {
+          left: 10px;
+        }
+
+        .carousel-btn.right {
+          right: 10px;
+        }
+
+        .flap-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          margin-bottom: 40px;
+        }
+
+        .flap-row {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap;
+          margin-top: 20px;
+        }
+
+
+        /* Override alignment for a single image in a row */
+        .flap-row.single-image {
+          display: flex;
+          justify-content: center;
+        }
+
+        /* Optional: keep image sizing controlled */
+        .flap-row.single-image .custom-hover-container {
+          width: 100%;
+        }
+
+        .fixed-height-vertical {
+          height: 500px;
+        }
+
+      </style>
+
+  </head>
+
+  <body class="appear-animate">
+      
+      <!-- Page Loader -->        
+      <div class="page-loader">
+          <div class="loader">Loading...</div>
+      </div>
+      <!-- End Page Loader -->
+      
+      <!-- Navigation panel -->
+      <nav class="main-nav transparent stick-fixed">
+          <div class="full-wrapper relative clearfix">
+              <div class="nav-logo-wrap local-scroll">
+                  <a href="#top" class="logo">
+                      <img src="Media/logo-name2.png" alt="" />
+                  </a>
+              </div>
+              <div class="mobile-nav">
+                  <i class="fa fa-bars"></i>
+              </div>
+              <!-- Main Menu -->
+              <div class="inner-nav desktop-nav">
+                  <ul class="font-variant clearlist scroll-nav local-scroll">
+                      <li class="active"><a href="index.html#home">Home</a></li>
+                      <li><a href="index.html#portfolio">My Works</a></li>
+                      <li><a href="index.html#contact">Contact</a></li>
+                      <li><a href="index.html#about">About</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      <!-- End Navigation panel -->
+          
+            
+        <!-- Head Section -->
+        <section class="page-section bg-dark-alfa-30" style="background-image: url('Media/Bed_Tray/portada.JPG');">
+            <div class="relative container align-left">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="work-title-font mb-20 mb-xs-0">Bed Tray</h1>
+                        <div class="hs-line-4 font-alt">
+                            Mixed Media Design and Fabrication
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Head Section -->
+
+            
+            
+        <!-- Section -->
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+                
+            <div class="col-md-8 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h2 class="font-variant align-left">Project Summary</h2>
+                        <div class="section-text">
+                          I took inspiration from Mediterranean tiles and stained glass. I have been fascinated by these two forms of art for quite some time now. They are all around my Pinterest boards, therefore I decided to make my own. 
+                        </div>
+                      </div>
+
+                      <div class="custom-hover-container">
+                        <img src="Media/Bed_Tray/sc.png" alt="dog picture" class="custom-hover-img">
+                        <div class="custom-hover-caption">
+                            My “dream house” board on Pinterest
+                            <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                                 
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <!-- Features Item --> 
+            <div class="col-md-4 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-left">
+                    <h2 class="font-variant align-left">Skills</h2>
+                </div>
+                <div class="skills-section font-variant align-left">
+                    <div class="skill-bubble">CAD Modeling (Solidworks CAD)</div>
+                    <div class="skill-bubble">Laser Cutting</div>
+                    <div class="skill-bubble">Miter Saw</div>
+                    <div class="skill-bubble">Woodworking</div>
+                    
+                </div>
+            </div>
+            <!-- End Features Item -->
+        </div>
+        <!-- End Features Grid -->
+
+        <br>
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+          <div class="section-text">To start off, I sketched what I wanted the tiles to look like: </div>
+
+            <div class="custom-hover-container fixed-height-vertical">
+                <img src="Media/Bed_Tray/sketch.png" alt="Right Cavity Mold CAM Operations" class="custom-hover-img">
+                <div class="custom-hover-caption">
+                    Tile Design Sketch
+                    <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;"></div>
+                </div>
+            </div>
+
+          <br>
+
+          <div class="section-text">For the wood frame, I took inspiration from an Instagram reel about a bed tray, which can be seen below.</div>
+          <br>
+
+          <div class="custom-hover-container fixed-height-vertical">
+              <img src="Media/Bed_Tray/igsc.png" alt="Part Fresh out of the CNC" class="custom-hover-img">
+              <div class="custom-hover-caption">
+                  Square Tray by Vaarnii
+                  <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">Source: Instagram Reels</div>
+              </div>
+          </div>
+
+          <br>
+
+          <div class="section-text">To start the fabrication process, I sketched in Solidworks of one corner of the tile and mirrored it twice so I would get the full figure. Then I exported it as a DXF so I could laser cut acrylic to create the tiles.</div>
+
+          <br>
+
+          <div class="custom-hover-container fixed-height-vertical">
+              <img src="Media/Bed_Tray/dxf.png" alt=" Tile DXF" class="custom-hover-img">
+              <div class="custom-hover-caption">
+                   Tile DXF
+                  <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;"></div>
+              </div>
+          </div>
+
+        </div>
+
+
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+            <div class="font-variant mt-40 align-left">
+                <div class="section-text align-left">After the tiles were cut, I painted them with acrylic paint mixed with Mod Podge to give them a stained glass look (the technique was courtesy of Google AI). </div>
+
+                <br>
+
+                <div class="section-text align-left">For the wood frame, I took a huge piece of ½ in thick plywood and cut an 11 by 11 inch piece for the bottom piece of the frame with the panel saw. Then I cut the four 1.5 inch by 9.5 in side panels with the miter saw. To put them all together, I used wood glue and I clamped all the pieces together for about an hour to dry and secure in place.</div>
+
+               
+
+                
+            </div>
+
+            <br>
+
+            <div class="custom-hover-container fixed-height-vertical">
+              <img src="Media/Bed_Tray/frame.png" alt="Part Fresh out of the CNC" class="custom-hover-img">
+              <div class="custom-hover-caption">
+                  Cut Frame
+                  <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;"></div>
+              </div>
+          </div>
+           <br>
+            <div class="section-text align-left">After it was secured I sanded it down with the belt sander and the orbital sander, and I stained it with a dark walnut stain. Then, I glued the "stain glass" tile pieces with epoxy and coated them with a UV cured resin.</div>
+          <br>
+
+          <div class="custom-hover-container fixed-height-vertical">
+              <img src="Media/Bed_Tray/IMG_1484.jpg" alt="Final Product" class="custom-hover-img">
+              <div class="custom-hover-caption">
+                  Final Product
+                  <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;"></div>
+              </div>
+          </div>
+
+          </div>
+
+      
+
+      <!-- Footer -->
+      <footer class="footer">
+          <div class="container">
+              
+              <!-- Footer Logo -->
+              <div class="mb-10 fadeInUp responsive-footer-logo" alt="" data-wow-duration="1.5s">
+                  <a href="#top"><img src="Media/Logo2.png"/></a>
+              </div>
+              <!-- End Footer Logo -->
+
+              <!-- Footer Text -->
+              <div class="footer-text">
+                  
+                  <!-- Copyright -->
+                  <div class="footer-copy font-alt">
+                      <a href="http://themeforest.net/user/theme-guru/portfolio" target="_blank">&copy; Rhythm 2015</a>.
+                  </div>
+                  <!-- End Copyright -->
+                                      
+              </div>
+           </div>
+      </footer>
+
+      <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>        
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+        <script type="text/javascript" src="js/gmap3.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript" src="js/contact-form.js"></script>
+        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
+        <script>
+          let currentSlideIndex = 0;
+
+          function moveCarousel(direction) {
+            const track = document.getElementById("carouselTrack");
+            const slides = document.querySelectorAll(".carousel-slide");
+            const totalSlides = slides.length;
+
+            currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+          }
+        </script>
+        <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.carousel-slide');
+          const track = document.querySelector('.carousel-track');
+          const totalSlides = slides.length;
+          let autoSlideInterval;
+
+          function showSlide(index) {
+            if (!track || !slides.length) return;
+
+            currentSlide = (index + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+          }
+
+          function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+              showSlide(currentSlide + 1);
+            }, 4000); // change time if needed
+          }
+
+          function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+          }
+
+          // Navigation buttons
+          document.querySelector('.carousel-btn.left')?.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+          });
+
+          document.querySelector('.carousel-btn.right')?.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+          });
+
+          // Pause on hover
+          const carouselContainer = document.querySelector('.carousel-container');
+          if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+            carouselContainer.addEventListener('mouseleave', startAutoSlide);
+          }
+
+          // Start the carousel
+          showSlide(0);
+          startAutoSlide();
+        </script>
+      
+    </body>
+</html>
+

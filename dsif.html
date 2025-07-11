@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Works &mdash; Reconfigurable DSIF-Liner Injection Molding System</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta charset="utf-8">
+        <meta name="author" content="Gabriela Oyarzun Batlle">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">    
+        
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="Media/logo1.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-responsive.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/magnific-popup.css"> 
+
+        <style>
+          .sketchfab-wrapper {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .sketchfab-wrapper iframe {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+          }
+
+          @media (max-width: 768px) {
+            .sketchfab-wrapper iframe {
+              min-height: 300px;
+            }
+          }
+
+          table.custom-table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          .custom-table thead {
+            background-color: #0B082B; /* Dark header */
+            color: #ffffff;
+          }
+
+          .custom-table tbody tr {
+            background-color: #ffffff;
+          }
+
+          .custom-table td,
+          .custom-table th {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+          }
+
+          .custom-table tbody td {
+            color: #333; /* text color */
+          }
+
+        .custom-hover-container {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          overflow: hidden;
+          border-radius: 2%;
+        }
+
+        .custom-hover-img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2%;
+        }
+
+        /* Caption style mimicking index hover behavior */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        /* Slide up on hover */
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          max-width: 800px;         /* Set your fixed width */
+          height: 500px;            /* Fixed height */
+          margin: 40px auto;
+          overflow: hidden;
+          background-color: white;  /* Background to match your layout */
+          border-radius: 10px;
+          box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+        }
+
+        .carousel-track {
+          display: flex;
+          height: 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-slide {
+          min-width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .custom-hover-container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .custom-hover-img {
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          display: block;
+        }
+
+        /* Caption style for hover */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+
+        .hover-source {
+          font-size: 0.8rem;
+          font-weight: 400;
+          display: block;
+          color: #333;
+          margin-top: 0.3rem;
+        }
+
+        /* Arrows */
+        .carousel-btn {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: #000;
+          font-size: 2rem;
+          cursor: pointer;
+          z-index: 10;
+        }
+
+        .carousel-btn.left {
+          left: 10px;
+        }
+
+        .carousel-btn.right {
+          right: 10px;
+        }
+
+        </style>
+    </head>
+
+    <body class="appear-animate">
+        
+        <!-- Page Loader -->        
+        <div class="page-loader">
+            <div class="loader">Loading...</div>
+        </div>
+        <!-- End Page Loader -->
+        
+        <!-- Navigation panel -->
+        <nav class="main-nav transparent stick-fixed">
+            <div class="full-wrapper relative clearfix">
+                <!-- Logo ( * your text or image sinto link tag *) -->
+                <div class="nav-logo-wrap local-scroll">
+                    <a href="#top" class="logo">
+                        <img src="Media/logo-name2.png" alt="" />
+                    </a>
+                </div>
+                <div class="mobile-nav">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="font-variant clearlist scroll-nav local-scroll">
+                        <li class="active"><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#portfolio">My Works</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navigation panel -->
+            
+            
+        <!-- Head Section -->
+        <section class="page-section bg-dark-alfa-30" style="background-image: url('Media/Capstone/cover.JPG');">
+            <div class="relative container align-left">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="work-title-font mb-20 mb-xs-0">Reconfigurable DSIF-Liner Injection Molding System</h1>
+                        <div class="hs-line-4 font-alt">
+                            D&D
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Head Section -->
+
+            
+            
+        <!-- Section -->
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+                
+            <div class="col-md-8 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h2 class="font-variant align-left">Project Summary</h2>
+                        <div class="section-text">In this team project, we designed and prototyped a reconfigurable mold system for DSIF-liner injection molding. The goal was to support, cool, and eject liners and part geometries of varying shapes while adhering to industry standards for injection molding.</div>
+                    </div>
+
+                    <div class="custom-hover-container">
+                        <img src="Media/Capstone/IMG_1328.jpg" alt="Bracket Isometric Render" class="custom-hover-img">
+                        <div class="custom-hover-caption">
+                            Alpha Prototype
+                            <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                                Picture by Emiliano Ghislieri M.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                   
+            <!-- Features Item --> 
+            <div class="col-md-4 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-left">
+                    <h2 class="font-variant align-left">Skills</h2>
+                </div>
+                <div class="skills-section font-variant align-left">
+                    <div class="skill-bubble">CAD modeling (SolidWorks)</div>
+                    <div class="skill-bubble">Design for Manufacturability (DFM)</div>
+                    <div class="skill-bubble">Mechanical Design under Constraints</div>
+                    <div class="skill-bubble">Injection molding process understanding</div>
+                    <div class="skill-bubble">Collaboration and technical presentations</div>
+                    <div class="skill-bubble">Material Optimization</div>
+                    <div class="skill-bubble">Budget Optimization</div>
+                    <div class="skill-bubble">Simulation-Driven Design</div>
+                    <div class="skill-bubble">Clear Documentation & Reporting</div>
+                    
+                </div>
+            </div>
+            <!-- End Features Item -->
+        </div>
+        <!-- End Features Grid -->
+
+        <div class="container relative mt-0 mb-0 mb-xs-10">
+            <div class="container mt-0 mb-0">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Design Goals</h3>
+                        <div class="section-text">
+                            <ul>
+                                <li>Build a modular mold system compatible with DSIF-liners.</li>
+                                <li>Ensure proper cooling and ejection for parts of various geometries.</li>
+                                <li>Maintain manufacturing robustness and industrial compatibility.</li>
+                            <ul>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+        
+
+        <div class="container relative mt-0 mb-0 mb-xs-10">
+            <div class="container mt-0 mb-0">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Needs, Requirements, and Specifications</h3>
+                        <div class="section-text">
+                            As we further understood the current issues with the client's setup, our team created a list of needs and associated metrics which defined the goals of the project to meet our client's goals. We based our needs off of client interviews, background research, and member experience with IM. We simultaneously identified primary, secondary, and tertiary stakeholders.
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="font-variant mt-40 align-left">Needs</h3>
+                <div class="table-responsive">
+                  <table class="custom-table">
+                    <thead>
+                        <tr>
+                          <th>No.</th>
+                          <th>Needs</th>
+                          <th>Importance (1–5)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>The mold system produces components that match geometric and dimensional tolerances of the liner.</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>The mold system cools the part effectively.</td>
+                          <td>3</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>The mold system allows an ejector pin system.</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>The mold system allows for and supports various liner geometries.</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>The mold system remains functional at molding temperatures.</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>The mold system is compatible with Morgan Press Desktop Plastic Injection Molding Machine, and can be accurately secured onto the platens.</td>
+                          <td>4</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>The mold system has a high expected lifetime.</td>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>The mold system is safe to maneuver/reconfigure.</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>The mold system is easy and quick to maneuver/reconfigure.</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>The mold system has lower materials and fabrication cost per geometry than a regular injection molding die.</td>
+                          <td>3</td>
+                        </tr>
+                        <tr>
+                          <td>12</td>
+                          <td>The mold system is affordable.</td>
+                          <td>4</td>
+                        </tr>
+                        <tr>
+                          <td>13</td>
+                          <td>The mold system produces parts quickly.</td>
+                          <td>3</td>
+                        </tr>
+                      </tbody>
+                  </table>
+               </div>
+
+               <h3 class="font-variant mt-40 align-left">Metrics</h3>
+                <div class="table-responsive">
+                  <table class="custom-table">
+                    <thead>
+                        <tr>
+                          <th>No.</th>
+                          <th>Metric</th>
+                          <th>Units</th>
+                          <th>Marginal Value</th>
+                          <th>Ideal Value</th>
+                          <th>Importance (1–5)</th>
+                          <th>Needs Satisfied</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>% deviation of part dimensions from nominal</td>
+                          <td>%</td>
+                          <td>5%</td>
+                          <td>2.5%</td>
+                          <td>5</td>
+                          <td>1, 4, 5</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>% cycles producing parts within tolerance</td>
+                          <td>% cycles</td>
+                          <td>95%</td>
+                          <td>99.7%</td>
+                          <td>2</td>
+                          <td>7</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Cooling efficiency</td>
+                          <td>% cycle time</td>
+                          <td>95</td>
+                          <td>&lt;70</td>
+                          <td>3</td>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>% cycles with successfully ejected parts within part tolerance</td>
+                          <td>% cycles</td>
+                          <td>90</td>
+                          <td>&gt;99</td>
+                          <td>5</td>
+                          <td>3</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>Cycle time</td>
+                          <td>sec</td>
+                          <td>120</td>
+                          <td>&lt;30</td>
+                          <td>5</td>
+                          <td>3, 9, 12</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>Alignment error in mounted molding system halves</td>
+                          <td>mm</td>
+                          <td>±0.25 mm</td>
+                          <td>±0.1 mm</td>
+                          <td>4</td>
+                          <td>6</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>Backing supports liner for # of cycles</td>
+                          <td>cycles</td>
+                          <td>10,000</td>
+                          <td>100,000</td>
+                          <td>2</td>
+                          <td>7</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>Minimum edge radius of mold</td>
+                          <td>mm</td>
+                          <td>&gt;0.13</td>
+                          <td>&gt;0.25</td>
+                          <td>5</td>
+                          <td>8</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>Mass of disposed material per cycle</td>
+                          <td>g</td>
+                          <td>450</td>
+                          <td>0</td>
+                          <td>3</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>Mold system (backing, cooling, ejection systems, liners) initial manufacturing cost</td>
+                          <td>$</td>
+                          <td>$1000</td>
+                          <td>$100</td>
+                          <td>4</td>
+                          <td>11</td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>Mold system (backing, cooling, ejection systems, liners) operational cost</td>
+                          <td>$ per cycle</td>
+                          <td>$5</td>
+                          <td>$0.50</td>
+                          <td>4</td>
+                          <td>11</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                </div>
+           </div>
+       </div>
+
+
+       <div class="container relative mt-0 mb-0 mb-xs-10">
+            <div class="container mt-0 mb-0">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Full Product Architecture and Functional Diagrams</h3>
+                        <div class="section-text">
+                            Based on the needs and requirements tables, we then created a functional tree and flow diagram. It includes inputting power for devices such as cooling and ejection. It also accepts molten plastic, supports the liner, cools, and ejects the parts.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-hover-container">
+                    <img src="Media/Capstone/tree.png" alt="Bracket Isometric Render" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                        Functional Tree
+                        <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="section-text">
+                    Next we made a flow diagram that illustrates two primary processes: mold setup and injection
+                    molding the part. The mold setup takes human energy as well as the liners and mold to produce
+                    the full mold system. The mold system is then input into the process of cooling and ejecting the
+                    parts. This process also requires a power input and molten plastic material input, as well as a
+                    signal transmission throughout. The final output of the process is the injection molded part.
+                    Other steps involved in injection molding the parts that are related to the IM machine were
+                    excluded as they don’t directly pertain to our mission statement, so our solution does not intend
+                    to modify them.
+                </div>
+
+                <br>
+
+                <div class="custom-hover-container">
+                    <img src="Media/Capstone/flow.png" alt="Bracket Isometric Render" class="custom-hover-img">
+                    <div class="custom-hover-caption">
+                        Functional Flow Diagram
+                        <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-text">
+                    Based on our needs and metrics, and functional tree and flow diagrams, it was apparent that we had three different crytical systems from which to solve: <strong>backing system, ejecting system, and cooling system. </strong>
+                </div>
+
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Backing System</h3>
+                        <div class="section-text">
+                            The figure below shows the concept of our backing system, which was defined as our most critical system and the first one we developed. We
+                            first researched existing solutions to gain inspiration as well as an understanding of what we
+                            needed to achieve in order to develop the backing system. This also gave us insight into the
+                            benefits and drawbacks of existing solutions.
+
+                            The backing is essential to be able to support various liner geometries and produce parts within
+                            acceptable tolerances, which is reflected in our needs and requirements above. As shown in the CAD model, the design space for this system was pre-defined by our client's mold geometry. We eventually chose to use casted pewter as our backing system.
+                        </div>
+                    </div>
+
+                    <div class="custom-hover-container">
+                        <img src="Media/Capstone/backing.png" alt="Bracket Isometric Render" class="custom-hover-img">
+                        <div class="custom-hover-caption">
+                            Backing System 
+                            <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                                Drawings by Fay-Ling Laures
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Ejection System</h3>
+                        <div class="section-text">
+                            According to our needs, we also needed to eject the parts effectively to help reduce cycle time.
+                            Though the complete existing ejection system isn’t depicted, the figure below shows the modification we needed to make to the mold to be compatible with the existing system.
+
+                            The original ejection system used at Ford pushed the part out from the bottom half of the mold.
+                            However, in our case, the part was sticking to the top half, requiring a modification to the
+                            design. To address this, we added an undercut to the ejection pin ensuring the part would stay
+                            attached to the bottom and could then be ejected by pushing it downward slightly with the lever.
+                            This setup is illustrated
+                        </div>
+                    </div>
+
+                    <div class="custom-hover-container">
+                        <img src="Media/Capstone/ejection.png" alt="Bracket Isometric Render" class="custom-hover-img">
+                        <div class="custom-hover-caption">
+                            Ejection System 
+                            <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                                Drawings by Fay-Ling Laures
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="section-text align-left">
+                        The original ejection system used at Ford Prototyping Lab pushed the part out from the bottom half of the mold.
+                        However, in our case, the part was sticking to the top half, requiring a modification to the
+                        design. To address this, we added an undercut to the ejection pin ensuring the part would stay
+                        attached to the bottom and could then be ejected by pushing it downward slightly with the lever. We also decided to place the ejection pin at the start of the runner, where the sprue is located, this way we minimized defects on the part. 
+                        This setup is illustrated below:
+                    </div>
+
+                    <br>
+
+                    <div class="custom-hover-container">
+                        <img src="Media/Capstone/me.png" alt="Bracket Isometric Render" class="custom-hover-img">
+                        <div class="custom-hover-caption">
+                            Ejection System with undercut
+                            <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                                Drawings by Gabriela Oyarzun B.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-text align-left">
+                        The ejection system worked consistently throughout our full prototype testing, reliably ejecting
+                        parts in 2–3 seconds. We iterated on the notch and pin length to balance retention and release,
+                        ensuring the part would stick just enough to the pin during molding but come off easily during
+                        ejection. We ultimately removed the notch and set the pin to protrude about ½", so that when
+                        lowered, it sat flush with the liner surface. This allowed the part to be swept off the mold with
+                        minimal effort.
+                    </div>
+
+
+                </div>
+
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Cooling System</h3>
+                        <div class="section-text">
+                            Our needs and requirements
+                            also reflect the need to properly cool the mold, so we would need to implement an external
+                            cooling system throughout the mold. Due to the geometry of the mold and the size of the cavity,
+                            the space we had to work with for cooling was also limited. As explained in the Cooling System
+                            section, we ended up with one aluminum cooling pipe through each mold half.
+
+                        </div>
+                    </div>
+
+                    <div class="custom-hover-container">
+                        <img src="Media/Capstone/cooling.png" alt="Bracket Isometric Render" class="custom-hover-img">
+                        <div class="custom-hover-caption">
+                            Cooling System 
+                            <div style="font-size: 0.75em; font-weight: 400; margin-top: 4px;">
+                                Drawings by Fay-Ling Laures
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+
+       <div class="container relative mt-0 mb-0 mb-xs-10">
+            <div class="container mt-0 mb-0">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Conclusion</h3>
+                        <div class="section-text">
+                            This project successfully demonstrated the design, development, and evaluation of a modular injection molding system tailored for interchangeable liner geometries. Through a careful balance of performance, manufacturability, and cost, my team and I developed a mold system that meets tight geometric tolerances, integrates efficient cooling and ejection mechanisms, and is safe and easy to reconfigure. By defining clear metrics and aligning them with user needs, we ensured that each subsystem contributed to the overall success of the design. The final prototype met the majority of performance goals and validated the feasibility of a low-cost, rapidly adaptable mold architecture suitable for research and educational environments.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    
+                    <!-- Footer Logo -->
+                    <div class="mb-10 fadeInUp responsive-footer-logo" alt="" data-wow-duration="1.5s">
+                        <a href="#top"><img src="Media/logo2.png"/></a>
+                    </div>
+                    <!-- End Footer Logo -->
+
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        
+                        <!-- Copyright -->
+                        <div class="footer-copy font-alt">
+                            <a href="http://themeforest.net/user/theme-guru/portfolio" target="_blank">&copy; Rhythm 2015</a>.
+                        </div>
+                        <!-- End Copyright -->
+                                            
+                    </div> 
+                    <!-- End Footer Text --> 
+                    
+                 </div>
+                 
+            
+
+            </footer>
+            <!-- End Foter -->
+            
+            
+            </div>
+            <!-- End Page Wrap -->
+        
+        
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>        
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+        <script type="text/javascript" src="js/gmap3.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript" src="js/contact-form.js"></script>
+        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
+        <script>
+          let currentSlideIndex = 0;
+
+          function moveCarousel(direction) {
+            const track = document.getElementById("carouselTrack");
+            const slides = document.querySelectorAll(".carousel-slide");
+            const totalSlides = slides.length;
+
+            currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+          }
+        </script>
+        <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.carousel-slide');
+          const track = document.querySelector('.carousel-track');
+          const totalSlides = slides.length;
+          let autoSlideInterval;
+
+          function showSlide(index) {
+            if (!track || !slides.length) return;
+
+            currentSlide = (index + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+          }
+
+          function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+              showSlide(currentSlide + 1);
+            }, 4000); // change time if needed
+          }
+
+          function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+          }
+
+          // Navigation buttons
+          document.querySelector('.carousel-btn.left')?.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+          });
+
+          document.querySelector('.carousel-btn.right')?.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+          });
+
+          // Pause on hover
+          const carouselContainer = document.querySelector('.carousel-container');
+          if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+            carouselContainer.addEventListener('mouseleave', startAutoSlide);
+          }
+
+          // Start the carousel
+          showSlide(0);
+          startAutoSlide();
+        </script>
+      
+    </body>
+</html>

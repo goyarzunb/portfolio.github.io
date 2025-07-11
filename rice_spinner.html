@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Works &mdash; Rice Spinner</title>
+        <title>Works &mdash; CNC Mill Bracket</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta charset="utf-8">
-        <meta name="author" content="Roman Kirichik">
+        <meta name="author" content="Gabriela Oyarzun Batlle">
         <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
@@ -24,10 +24,423 @@
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/vertical-rhythm.min.css">
         <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">    
+        <link rel="stylesheet" href="css/magnific-popup.css"> 
+
+        <style>
+          .sketchfab-wrapper {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .sketchfab-wrapper iframe {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+          }
+
+          @media (max-width: 768px) {
+            .sketchfab-wrapper iframe {
+              min-height: 300px;
+            }
+          }
+
+          table.custom-table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          .custom-table thead {
+            background-color: #0B082B; /* Dark header */
+            color: #ffffff;
+          }
+
+          .custom-table tbody tr {
+            background-color: #ffffff;
+          }
+
+          .custom-table td,
+          .custom-table th {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+          }
+
+          .custom-table tbody td {
+            color: #333; /* text color */
+          }
+
+        .custom-hover-container {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          overflow: hidden;
+          border-radius: 2%;
+        }
+
+        .custom-hover-img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2%;
+        }
+
+        /* Caption style mimicking index hover behavior */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        /* Slide up on hover */
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+        /* === Generic Carousel Styles === */
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          max-width: 800px;
+          height: 500px;
+          margin: 40px auto;
+          overflow: hidden;
+          background-color: white;
+          border-radius: 10px;
+        }
+
+        .carousel-track {
+          display: flex;
+          height: 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-slide {
+          min-width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .carousel-hover-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+
+        .carousel-img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+          display: block;
+          margin: auto;
+        }
+
+        .carousel-caption {
+          width: 100%;
+          height: auto;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        .carousel-hover-wrapper:hover .carousel-caption {
+          transform: translateY(0);
+        }
+
+        .carousel-caption small {
+          display: block;
+          font-weight: 400;
+          font-size: 0.85em;
+          margin-top: 5px;
+        }
+
+        /* Arrows */
+        .carousel-arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 2rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: #333;
+          z-index: 10;
+        }
+
+        .carousel-arrow.left {
+          left: 10px;
+        }
+
+        .carousel-arrow.right {
+          right: 10px;
+        }
 
 
-</head>
+        .custom-hover-container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .custom-hover-img {
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          display: block;
+        }
+
+        /* Caption style for hover */
+        .custom-hover-caption {
+          width: 100%;
+          height: 84px;
+          padding: 20px 20px 0 20px;
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: #000;
+        }
+
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+
+        .hover-source {
+          font-size: 0.8rem;
+          font-weight: 400;
+          display: block;
+          color: #333;
+          margin-top: 0.3rem;
+        }
+
+          .sketchfab-wrapper {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .sketchfab-wrapper iframe {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+          }
+
+          @media (max-width: 768px) {
+            .sketchfab-wrapper iframe {
+              min-height: 300px;
+            }
+          }
+
+          table.custom-table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          .custom-table thead {
+            background-color: #0B082B; /* Dark header */
+            color: #ffffff;
+          }
+
+          .custom-table tbody tr {
+            background-color: #ffffff;
+          }
+
+          .custom-table td,
+          .custom-table th {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+          }
+
+          .custom-table tbody td {
+            color: #333; /* text color */
+          }
+
+        .custom-hover-container {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          overflow: hidden;
+          border-radius: 2%;
+        }
+
+        .custom-hover-img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2%;
+        }
+
+        .custom-hover-container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .custom-hover-img {
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          display: block;
+        }
+
+        .custom-hover-caption {
+          width: 100%;
+          padding: 1em;
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: rgba(255, 255, 255, 0.85);
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bold;
+          color: #000;
+          text-align: center;
+          line-height: 1.4;
+          font-size: clamp(12px, 2.5vw, 16px); 
+          word-wrap: break-word;
+        }
+
+        .custom-hover-container:hover .custom-hover-caption {
+          transform: translateY(0);
+        }
+
+        .custom-hover-source {
+          font-size: clamp(10px, 2vw, 14px);
+          font-style: italic;
+          display: block;
+          margin-top: 0.5em;
+          color: #444;
+        }
+
+
+        .hover-source {
+          font-size: 0.8rem;
+          font-weight: 400;
+          display: block;
+          color: #333;
+          margin-top: 0.3rem;
+        }
+
+        .flap-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          margin-bottom: 40px;
+        }
+
+
+        .custom-hover-container {
+          position: relative;
+          width: 45%;
+          overflow: hidden;
+          border-radius: 10px;
+        }
+
+        .custom-hover-img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          display: block;
+          border-radius: 10px;
+        }
+
+        .flap-row {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap;
+          margin-top: 20px;
+        }
+
+
+        /* Override alignment for a single image in a row */
+        .flap-row.single-image {
+          display: flex;
+          justify-content: center;
+        }
+
+        /* Optional: keep image sizing controlled */
+        .flap-row.single-image .custom-hover-container {
+          
+          width: 100%;
+        }
+
+        .custom-hover-container {
+          position: relative;
+          width: 45%;
+          overflow: hidden;
+        }
+
+        .fixed-height {
+          height: 250px;
+        }
+
+        .fixed-height-vertical {
+          height: 500px;
+        }
+
+        .custom-hover-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+          display: block;
+        }
+
+        </style>
+    </head>
+
     <body class="appear-animate">
         
         <!-- Page Loader -->        
@@ -35,148 +448,277 @@
             <div class="loader">Loading...</div>
         </div>
         <!-- End Page Loader -->
-            
-            <!-- Navigation panel -->
-            <nav class="main-nav dark transparent stick-fixed">
-                <div class="full-wrapper relative clearfix">
-                    <!-- Logo ( * your text or image into link tag *) -->
-                    <div class="nav-logo-wrap local-scroll">
-                        <a href="#top" class="logo">
-                            <img src="Media/logo1.png">
-                        </a>
-                    </div>
-                    <div class="mobile-nav">
-                        <i class="fa fa-bars"></i>
-                    </div>
-                    <!-- Main Menu -->
-                    <div class="inner-nav desktop-nav">
-                        <ul class="clearlist scroll-nav local-scroll">
-                            <li class="active"><a href="index.html#home">Home</a></li>
-                            <li><a href="index.html#portfolio">Portfolio</a></li>
-                            <li><a href="index.html#contact">Contact</a></li>
-                            <li><a href="index.html#about">About</a></li>
-                        </ul>
-                    </div>
+        
+        <!-- Navigation panel -->
+        <nav class="main-nav transparent stick-fixed">
+            <div class="full-wrapper relative clearfix">
+                <!-- Logo ( * your text or image sinto link tag *) -->
+                <div class="nav-logo-wrap local-scroll">
+                    <a href="#top" class="logo">
+                        <img src="Media/logo-name2.png" alt="" />
+                    </a>
                 </div>
-            </nav>
-            <!-- End Navigation panel -->
+                <div class="mobile-nav">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="font-variant clearlist scroll-nav local-scroll">
+                        <li class="active"><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#portfolio">My Works</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navigation panel -->
             
-            
-            <!-- Head Section -->
-            <section class="page-section bg-dark-alfa-30" style="background-image: url('Media/Rice Spinner/spinning.png');">
-                <div class="relative container align-left">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h1 class="work-title-font mb-20 mb-xs-0">Rice Spinner</h1>
-                            <div class="hs-line-4 font-alt">
-                                Sustainability Focused Design
-                            </div>
+        
+        <!-- Head Section -->
+        <section class="page-section bg-dark-alfa-30" style="background-image: url('Media/Rice Spinner/spinning.png');">
+            <div class="relative container align-left">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="work-title-font mb-20 mb-xs-0">Rice Spinner</h1>
+                        <div class="hs-line-4 font-alt">
+                            Sustainability Focused Design
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- End Head Section -->
+            </div>
+        </section>
+        <!-- End Head Section -->
             
-            
-            <!-- Section -->
-            <div class="container relative mt-40 mb-20 mb-xs-10">
-        
-                <!-- Features Grid -->
-                <div class="row alt-features-grid mb-80 mb-xs-40">
-                    
-                    <!-- Text Item -->
-                    <div class="col-md-8 col-sm-6 mb-sm-50 mb-xs-30">
+        <!-- Section -->
+        <div class="container relative mt-40 mb-20 mb-xs-10">
+                
+            <div class="col-md-8 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h2 class="font-variant align-left"> Rice Spinner: A Sustainable Kitchen Appliance</h2>
+                        <div class="section-text">As part of my<strong> Design Thinking and Communication (DTC) </strong>course at Northwestern, my team and I developed a low-cost, water-saving rice washing device for home use. This project began with extensive ethnographic research into rice preparation rituals and sustainability habits, leading to a user-driven product that saves time, water, and mess in the kitchen.</div>
+                    </div>
+
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Project Goal</h3>
+                        <div class="section-text">
+                            Create a sustainable, efficient tool for rinsing rice that reduces water usage and improves the user experience for everyday home cooks.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                       
+            <!-- Features Item --> 
+            <div class="col-md-4 col-sm-6 mb-sm-40 mb-xs-30">
+                <div class="alt-features-item align-left">
+                    <h2 class="font-variant align-left">Skills</h2>
+                </div>
+                    <div class="skills-section align-left">
+                      <div class="skill-bubble">Rapid Prototyping</div>
+                      <div class="skill-bubble">Machining: Turning</div>
+                      <div class="skill-bubble">Research</div>
+                      <div class="skill-bubble">Collaboration</div>
+                      <div class="skill-bubble">Cross-Functional Team Work</div>
+                      <div class="skill-bubble">User Testing & Feedback Analysis</div>
+                      <div class="skill-bubble">Sustainability in Product Design</div>
+                </div>
+            </div>
+          </div>
+          <!-- End Features Item -->
+          <!-- End Features Grid -->
+
+          <div class="container relative mt-0 mb-0 mb-xs-10">
+            <div class="container mt-0 mb-0">
+                <div class="alt-features-item align-center">
+                    <div class="align-left">
+                        <h3 class="font-variant align-left">Design Process</h3>
+                        <h4 class="font-variant align-left">Research:</h4>
+                        <div class="section-text">
+                            To start our design process, we conducted over 20 interviews with users ranging from college students to professional chefs. Additionally we conducted user observations, where we found key pain points:
+                            <ul>
+                               <li>Difficulty washing rice without spilling grains</li>
+                               <li>No standard method for determining when rice is clean</li>
+                               <li>Excessive water usage (over 2 gallons per wash on average)</li>
+                               <li>Frustration with transferring wet rice between containers</li>
+                            </ul>
+                             These painpoints allowed us to develop a list of needs and requierements we kept in mind during the brainstorming and prototyping phase, from which we also developed two primary personas:
+                             <ul>
+                                <li><strong>"The Efficient Home Cook"</strong> – values speed and convenience</li>
+                                <li><strong>"The Mindful Chef"</strong> – prioritizes sustainability and precision</li>
+                              </ul>
+                            <p>
+                              These findings directly shaped our problem statement and initial product requirements: a <strong>low-effort, water-efficient</strong> tool for rinsing rice that retains cultural familiarity while improving usability.
+                            </p>
+                        </div>
+
+                        <h4 class="font-variant align-left">Brainstorming:</h4>
+                        <div class="section-text">
+                          <p>
+                            To kick off the design process, we began with a brainstorming session to explore a wide range of ideas. Our goal was to identify potential solutions that addressed user pain points, functional requirements, and constraints such as cost, manufacturability, and ease of use. After the session was done, we were able to cluster our ideas into four categories: <strong>hand tools, spinners, shakers, and filters.</strong>
+                          </p>
+
+                          <div class="flap-row">
+                            <div class="custom-hover-container fixed-height-vertical">
+                              <img src="Media/Rice Spinner/hand-tools.jpg" alt="Hand Tools Sketches" class="custom-hover-img cropped-img">
+                              <div class="custom-hover-caption">
+                                Hand Tools
+                                <div class="custom-hover-source">Source: In-house Brainstorming Session</div>
+                              </div>
+                            </div>
+
+                            <div class="custom-hover-container fixed-height-vertical">
+                              <img src="Media/Rice Spinner/spinners.jpg" alt="Spinners Sketches" class="custom-hover-img cropped-img">
+                              <div class="custom-hover-caption">
+                                Spinners
+                                <div class="custom-hover-source">Source: In-house Brainstorming Session</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flap-row">
+                            <div class="custom-hover-container fixed-height-vertical">
+                              <img src="Media/Rice Spinner/shakers.jpg" alt="Shakers sketches" class="custom-hover-img cropped-img">
+                              <div class="custom-hover-caption">
+                                Shakers
+                                <div class="custom-hover-source">Source: In-house Brainstorming Session</div>
+                              </div>
+                            </div>
+
+                            <div class="custom-hover-container fixed-height-vertical">
+                              <img src="Media/Rice Spinner/filters.jpg" alt="Filters sketches" class="custom-hover-img cropped-img">
+                              <div class="custom-hover-caption">
+                                Filters
+                                <div class="custom-hover-source">Source: In-house Brainstorming Session</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <br>
+
+                          <p>
+                            To decide on which area/cluster/idea to focus on for prototyping, we created an alternatives matrix:
+                          </p>
+
+                          <div class="flap-row single-image ">
+                            <div class="custom-hover-container">
+                              <img src="Media/Rice Spinner/alt-matrix.png" alt="alternatives matrix" class="custom-hover-img cropped-img">
+                              <div class="custom-hover-caption">
+                                Alternatives Matrix
+                                <div class="custom-hover-source">Source: In-house Brainstorming Session</div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <p>
+                            From which we decided to move forward with the modified salad spinner.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="container relative mt-0 mb-0 mb-xs-10">
+                    <div class="container mt-0 mb-0">
                         <div class="alt-features-item align-center">
                             <div class="align-left">
-                                <h4 class="alt-features-title">About</h4>
-                                <div class="alt-features-descr">Washing rice is a daily ritual for many, but have you ever thought about the environmental impact? Traditional methods use <strong>copious amounts of water</strong>, often wasted in the pursuit of clarity. That’s where the Rice Spinner comes in—a solution designed not just for convenience, but for sustainability. With its efficient cranking mechanism and <strong>water-conserving design</strong>, the Rice Spinner cleans rice thoroughly while using significantly less water. No more endless rinses or wasteful draining. It's a small innovation with a big impact, proving that even the simplest tasks can be reimagined for a greener future.</div>
+
+                        <h4 class="font-variant align-left">Iterative Prototyping:</h4>
+                        <div class="section-text">
+                          <p>
+                            Key insights from user observations and interviews included the importance of <strong>wall height to prevent splashing</strong>, <strong>basket containment to minimize rice loss</strong>, and <strong>mechanical leverage for spinning efficiency</strong>. Because of this, we chose to adapt a conventional salad spinner because it offered a simple, intuitive, and proven method for agitating and spinning, which is exactly what we needed to clean rice effectively. Additionally, the salad spinner’s mechanism allowed us to rapidly prototype using familiar parts while focusing our design efforts on rice-specific constraints such as smaller grain size and finer filtration needs. This approach gave us a practical foundation to build on while saving time and reducing complexity during early development.
+                          </p>
+
+                          <p>
+                            We decided to add flaps to the spinner to have more friction applied towards the rice grains, and tested three different flaps: (1) silicone flaps, (2), polypropylene flaps without holes and contours to bowl shape, and (3) polypropylene flaps with holes. Our objective was to determine which flap cleaned the rice the most effectively (measured through how much water was used) and comfortably.
+                          </p>
+
+
+                          <div class="flap-row">
+                            <div class="custom-hover-container fixed-height">
+                              <img src="Media/Rice Spinner/flaps2.png" alt="Polypropylene and Silicone Flaps" class="custom-hover-img cropped-img">
+                              <div class="custom-hover-caption">
+                                Silicone and Polypropylene Flaps
+                                <div class="custom-hover-source">Source: In-house testing</div>
+                              </div>
                             </div>
-                        </div>
-                    </div>
-                       
-                    <!-- Features Item -->
-                    <div class="col-sm-3">
-                        <div class="alt-features-item align-left">
-                            <h4 class="alt-features-title">Skills</h4>
-                        </div>
-                        <div class="skills-section align-left">
-                          <div class="skill-bubble">Rapid Prototyping</div>
-                          <div class="skill-bubble">Machining: Turning</div>
-                          <div class="skill-bubble">Research</div>
-                          <div class="skill-bubble">Collaboration</div>
-                          <div class="skill-bubble">Cross-Functional Team Work</div>
-                          <div class="skill-bubble">User Testing</div>
-                        </div>
 
-                    </div>
-                    <!-- End Features Item -->
-                    
-                </div>
-            </div>
-            <!-- End Features Grid -->
-            
-
-            <div class="container mt-40 mb-20">
-            <!-- What Section -->
-                <div class="row align-items-center mb-80">
-                    <!-- Text on the Left -->
-                    <div class="col-md-6">
-                        <div class="text-section">
-                            <h4 class="alt-features-title">What:</h4>
-                            <div class="alt-features-descr">
-                                <ul>
-                                    <li>Designed a rice washing tool to <strong>reduce water waste</strong> and improve efficiency.</li>
-                                    <li><strong>Simplified</strong> the traditional process of rice washing for modern kitchens.</li>
-                                    <li>Created a <strong>compact, durable device</strong> that’s easy to use and maintain.</li>
-                                </ul>
+                            <div class="custom-hover-container fixed-height">
+                              <img src="Media/Rice Spinner/flaps1.png" alt="Perforated Flap on PVC" class="custom-hover-img cropped-img">
+                              <div class="custom-hover-caption">
+                                Perforated Flap on PVC Pipe
+                                <div class="custom-hover-source">Source: In-house testing</div>
+                              </div>
                             </div>
-                        </div>
-                    </div>
-                <!-- Image on the Right -->
-                <div class="col-md-6">
-                    <img src="Media/Rice Spinner/spinner.png" alt="What Image" class="img-fluid rounded">
-                </div>
-            </div>
+                          </div>
 
-                <!-- How Section -->
-                <div class="row align-items-center flex-row-reverse mb-80">
-                    <!-- Text on the Right -->
-                    <div class="col-md-6">
-                        <div class="text-section">
-                            <h4 class="alt-features-title">How:</h4>
-                            <ul>
-                                <li>Used <strong>design thinking methods</strong> to brainstorm and create mock-ups.</li>
-                                <li>Recycled a salad spinner and borrowed the hand-crank mechanism to <strong>simulate effective rinsing motion</strong>.</li>
-                                <li>Incorporated internal agitators to thoroughly clean rice without excess water, which were connected by a tapped stock of ABS.</li>
-                                <li><strong>Prototyped and tested</strong> the design for durability and ease of operation.</li>
-                            </ul>
+
+                          <br>
+                          
+                          <p>
+                            We conducted <strong>real rice rinsing tests</strong> using these flap prototypes under running water to simulate actual use. Through this testing, we identified common pain points such as:
+                          </p>
+                          <ul>
+                            <li>Water not draining quickly enough due to tight mesh geometry</li>
+                            <li>Rice grains escaping through wide gaps in early filter concepts</li>
+                            <li>Difficulty maintaining balance while spinning by hand</li>
+                          </ul>
+                          <p>
+                            These observations directly shaped our design refinements, including the placement of internal supports, improvements to drainage pathways, and exploration of different rotational interfaces.
+                          </p>
+
+                          <div class="flap-row single-image">
+                              <div class="custom-hover-container">
+                                <img src="Media/Rice Spinner/testing_pour.png" class="custom-hover-img" />
+                                <div class="custom-hover-caption">
+                                  Rinse and Pouring Tests<br><span class="custom-hover-source">Source: In-house Testing</span>
+                                </div>
+                              </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <!-- Image on the Left -->
-                    <div class="col-md-6">
-                        <img src="Media/Rice Spinner/spinner_lid.png" alt="How Image" class="img-fluid rounded">
-                    </div>
+                  </div>
                 </div>
 
-                <!-- Results Section -->
-                <div class="row align-items-center mb-80">
-                    <!-- Text on the Left -->
-                    <div class="col-md-6">
-                        <div class="text-section">
-                            <h4 class="alt-features-title">Result:</h4>
-                            <ul>
-                                <li><strong>Saved 3 cups of water</strong> per cup of rice washed compared to traditional washing.</li>
-                                <li>Provided an <strong>eco-friendly</strong> solution adopted by households for everyday cooking.</li>
-                                <li>Delivered a clean and <strong>hassle-free</strong> rice preparation experience.</li>
-                            </ul>
-                        </div>
                     </div>
-                    <!-- Image on the Right -->
-                    <div class="col-md-6">
-                        <img src="Media/Rice Spinner/testing_pour.png" alt="Results Image" class="img-fluid rounded">
+                  </div>
+
+              <div class="container relative mt-40 mb-20 mb-xs-10">
+                <div class="font-variant mt-40 align-left"></div>
+                <h2 class="font-variant align-left">Final Product:</h2>
+
+                <div class="flap-row single-image">
+                    <div class="custom-hover-container">
+                      <img src="Media/Rice Spinner/spinner.png" class="custom-hover-img" />
+                      <div class="custom-hover-caption">
+                        Final Product<br><span class="custom-hover-source">Source: In-house Prototyping</span>
+                      </div>
                     </div>
                 </div>
-            </div>
+              </div>
+
+              <div class="container relative mt-0 mb-0 mb-xs-10">
+                  <div class="container mt-0 mb-0">
+                      <div class="alt-features-item align-center">
+                          <div class="align-left">
+
+                        <h4 class="font-variant align-left">Conclusions and Impact:</h4>
+                          <div class="section-text">
+                            <p>
+                              From the data obtained from the testing, it can be concluded that the silicone flap is the easiest to crank compared to the polypropylene flaps, which are stiff and meet more resistance. Although the polypropylene with holes flap agitates well, the drawback of the crank needing more force makes the silicone the best choice.
+                            </p>
+                          </div>
+
+              
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
 
 
             <!-- Footer -->
@@ -185,7 +727,7 @@
                     
                     <!-- Footer Logo -->
                     <div class="mb-30 fadeInUp responsive-footer-logo" alt="" data-wow-duration="1.5s">
-                        <a href="#top"><img src="Media/logo1.png"/></a>
+                        <a href="#top"><img src="Media/logo2.png"/></a>
                     </div>
                     <!-- End Footer Logo -->
 
@@ -242,8 +784,77 @@
         <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
         <script type="text/javascript" src="js/all.js"></script>
         <script type="text/javascript" src="js/contact-form.js"></script>
-        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>        
-        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>   
+         <script>
+          let currentSlideIndex = 0;
+
+          function moveCarousel(direction) {
+            const track = document.getElementById("carouselTrack");
+            const slides = document.querySelectorAll(".carousel-slide");
+            const totalSlides = slides.length;
+
+            currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+          }
+        </script>
+        <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.carousel-slide');
+          const track = document.querySelector('.carousel-track');
+          const totalSlides = slides.length;
+          let autoSlideInterval;
+
+          function showSlide(index) {
+            if (!track || !slides.length) return;
+
+            currentSlide = (index + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+          }
+
+          function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+              showSlide(currentSlide + 1);
+            }, 4000); // change time if needed
+          }
+
+          function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+          }
+
+          // Navigation buttons
+          document.querySelector('.carousel-btn.left')?.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+          });
+
+          document.querySelector('.carousel-btn.right')?.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+          });
+
+          // Pause on hover
+          const carouselContainer = document.querySelector('.carousel-container');
+          if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+            carouselContainer.addEventListener('mouseleave', startAutoSlide);
+          }
+
+          // Start the carousel
+          showSlide(0);
+          startAutoSlide();
+        </script>    
+        <script>
+          let currentSlide = 0;
+
+          function moveSlide(direction) {
+            const track = document.getElementById('carousel-track');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            const offset = -currentSlide * 100;
+            track.style.transform = `translateX(${offset}%)`;
+          }
+        </script>
+ 
         
     </body>
 </html>
